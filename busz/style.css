@@ -1,0 +1,20 @@
+body{
+    background-image: url(back1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+
+}
+#kezdo{
+    position: absolute; /* Pozicionálás */
+    top: 50%; /* 50%-ra a viewport magasságához képest */
+    left: 50%; /* 50%-ra a viewport szélességéhez képest */
+    transform: translate(-50%, -50%); /* Középre igazítás */
+    width: 200px;
+    height: 100px;
+
+    text-align: center;
+    line-height: 100px; /* Középre helyezi a szöveget */
+    width: 500px;
+    height: 500px;
+}
