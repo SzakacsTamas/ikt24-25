@@ -5,7 +5,7 @@ body {
 }
 
 #kezdo {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -27,7 +27,7 @@ body {
 #kezdo:hover {
     width: 1100px;
     height: 600px;
-    font-size: 120px;
+    font-size: 110px;
 }
 
 .move-up {
@@ -84,6 +84,7 @@ body {
     cursor: pointer;
     text-align: center;
 }
+
 #done{
     position: absolute;
     top: 85%;
@@ -100,4 +101,19 @@ body {
     background-size: cover;
     color: aliceblue;
     font-weight: bold;
+}
+#done:hover{
+    width: 280px;
+    height: 160px;
+    font-size: 60px;
+}
+#kartyaKep{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 100px;
+ 
+
 }
