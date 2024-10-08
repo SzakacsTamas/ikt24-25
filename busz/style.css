@@ -1,20 +1,103 @@
-body{
+body {
     background-image: url(back1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-  
-
 }
-#kezdo{
-    position: absolute; /* Pozicionálás */
-    top: 50%; /* 50%-ra a viewport magasságához képest */
-    left: 50%; /* 50%-ra a viewport szélességéhez képest */
-    transform: translate(-50%, -50%); /* Középre igazítás */
-    width: 200px;
-    height: 100px;
 
+#kezdo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    line-height: 100px; /* Középre helyezi a szöveget */
-    width: 500px;
-    height: 500px;
+    line-height: 100px;
+    width: 1000px;
+    height: 550px;
+    cursor: pointer;
+    font-size: 100px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url(back.jpg);
+    border: 15px solid rgb(0, 0, 0);
+    color: aliceblue;
+    font-weight: bold;
+    transition: transform 1s ease;
+    /* Animáció hozzáadása */
+}
+
+#kezdo:hover {
+    width: 1100px;
+    height: 600px;
+    font-size: 120px;
+}
+
+.move-up {
+    transform: translate(-50%, calc(-50% - 200px));
+    /* Felfelé mozgás a középpont megőrzésével */
+}
+
+#szabaly1 {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 100px;
+    width: 600px;
+    height: 300px;
+    
+    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url(back3.jpg);
+    border: 15px solid rgb(0, 0, 0);
+    color: aliceblue;
+    font-weight: bold;
+}
+
+#jatekosokSzama {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#szabaly2 {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 100px;
+    width: 600px;
+    height: 300px;
+   
+    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url(back3.jpg);
+    border: 15px solid rgb(0, 0, 0);
+    color: aliceblue;
+    font-weight: bold;
+}
+#hard{
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    text-align: center;
+}
+#done{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 100px;
+    width: 250px;
+    height: 130px;
+    cursor: pointer;
+    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url(gombfa2.avif);
+    background-size: cover;
+    color: aliceblue;
+    font-weight: bold;
 }
