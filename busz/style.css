@@ -11,13 +11,16 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     line-height: 100px;
-    width: 1000px;
-    height: 550px;
+    width: 50%;
+    height: 50%;
     cursor: pointer;
-    font-size: 100px;
+    font-size: 5vw;
+    
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-image: url(back.jpg);
-    border: 15px solid rgb(0, 0, 0);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 10px solid rgb(0, 0, 0);
     color: aliceblue;
     font-weight: bold;
     transition: transform 1s ease;
@@ -48,7 +51,7 @@ body {
     font-size: 50px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-image: url(back3.jpg);
-    border: 15px solid rgb(0, 0, 0);
+    border: 10px solid rgb(0, 0, 0);
     color: aliceblue;
     font-weight: bold;
 }
@@ -74,7 +77,7 @@ body {
     font-size: 50px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-image: url(back3.jpg);
-    border: 15px solid rgb(0, 0, 0);
+    border: 10px solid rgb(0, 0, 0);
     color: aliceblue;
     font-weight: bold;
 }
@@ -116,4 +119,21 @@ body {
     line-height: 100px;
  
 
+}
+#mehetunkTovabb{
+    position: absolute;
+    top: 50%;
+    left: 93%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 100px;
+    width: 200px;
+    height: 100px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url(tovabbGomb.webp);
+    background-size: cover;
+    color: aliceblue;
+    font-weight: bold;
 }

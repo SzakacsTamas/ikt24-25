@@ -21,13 +21,15 @@
     
    </form>
    <button id="done" onclick="inditas0()">Kész</button>
-
+   <button id="mehetunkTovabb">Mehetünk tovább</button>
     
     <div id="kocka">
         
     </div>
     <script>
         function inditas0(){
+            let jatekosokSzama=document.getElementById("jatekosokSzama")
+            if(jatekosokSzama.value<16 && jatekosokSzama.value>1){
                 let gomb=document.createElement("button")
                 gomb.setAttribute("id","kezdo")
                 gomb.addEventListener("click",
@@ -42,9 +44,11 @@
                 })
                 gomb.textContent="Kezdőthet az utolsó utazás?!";
                 document.body.appendChild(gomb);
-
+                
                 document.body.removeChild(done);
                 document.body.removeChild(menu);
+            }
+
 
             }
         
