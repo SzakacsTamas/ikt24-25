@@ -21,9 +21,9 @@
     
    </form>
    <button id="done" onclick="inditas0()">Kész</button>
-   <button id="mehetunkTovabb">Mehetünk tovább</button>
+ 
     
-    <div id="kocka">
+    <div id="jatekosMenu">
         
     </div>
     <script>
@@ -33,12 +33,22 @@
                 let gomb=document.createElement("button")
                 gomb.setAttribute("id","kezdo")
                 gomb.addEventListener("click",
-                function(){
+                function()
+                {
                     document.body.removeChild(document.getElementById("kezdo"));
                     let kep=document.createElement("img")
                     kep.setAttribute("src","kartya.png")
                     kep.setAttribute("id","kartyaKep");
                     document.body.appendChild(kep);
+                    let tovabbGomb=document.createElement("button")
+                    tovabbGomb.setAttribute("id","mehetunkTovabb")
+                    tovabbGomb.textContent="Mehetünk tovább"
+                    document.body.appendChild(tovabbGomb);
+                    tovabbGomb.addEventListener("click", 
+                    function()
+                    {
+                        alert("gsfd")
+                    })
                 
                 
                 })
@@ -50,6 +60,13 @@
             }
 
 
+            class Jatekosmenu {
+                constructor(jatekos, kartya,pia) {
+                    this.jatekos = jatekos;
+                    this.kartya = [];
+                    this.pia = [];
+                }
+                }
             }
         
     </script>

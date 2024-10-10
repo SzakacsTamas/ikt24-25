@@ -1,0 +1,1 @@
+Az osztály létehoz annyi játékos objektumot, amennyit megadunk az első menüben
