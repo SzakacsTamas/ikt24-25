@@ -1,74 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-   <form action="" id="menu">
-    <div id="szabaly1">
-        <label for="jatekosokSzama">Hányan szeretnétek játszani?</label><br>
-        <input type="number" id="jatekosokSzama" max="15" min="2">
-    </div>
-    <div id="szabaly2">
-        <label for="mode">Esetleg hardmode báttttya?</label><br>
-        <input type="checkbox" id="hard">
-        
-    </div>
 
-    
-   </form>
-   <button id="done" onclick="inditas0()">Kész</button>
- 
-    
+<body>
+    <form action="" id="menu">
+        <div id="szabaly1">
+            <label for="jatekosokSzama">Hányan szeretnétek játszani?</label><br>
+            <input type="number" id="jatekosokSzama" max="15" min="2">
+        </div>
+        <div id="szabaly2">
+            <label for="mode">Esetleg hardmode báttttya?</label><br>
+            <input type="checkbox" id="hard">
+
+        </div>
+
+
+    </form>
+    <button id="done" onclick="inditas0()">Kész</button>
+
+
     <div id="jatekosMenu">
-        
+       
     </div>
     <script>
-        function inditas0(){
-            let jatekosokSzama=document.getElementById("jatekosokSzama")
-            if(jatekosokSzama.value<16 && jatekosokSzama.value>1){
-                let gomb=document.createElement("button")
-                gomb.setAttribute("id","kezdo")
+        function inditas0() {
+            let jatekosokSzama = document.getElementById("jatekosokSzama")
+            if (jatekosokSzama.value < 16 && jatekosokSzama.value > 1) {
+                let gomb = document.createElement("button")
+                gomb.setAttribute("id", "kezdo")
                 gomb.addEventListener("click",
-                function()
-                {
-                    document.body.removeChild(document.getElementById("kezdo"));
-                    let kep=document.createElement("img")
-                    kep.setAttribute("src","kartya.png")
-                    kep.setAttribute("id","kartyaKep");
-                    document.body.appendChild(kep);
-                    let tovabbGomb=document.createElement("button")
-                    tovabbGomb.setAttribute("id","mehetunkTovabb")
-                    tovabbGomb.textContent="Mehetünk tovább"
-                    document.body.appendChild(tovabbGomb);
-                    tovabbGomb.addEventListener("click", 
-                    function()
-                    {
-                        alert("gsfd")
+                    function () {
+                        document.body.removeChild(document.getElementById("kezdo"));
+                        let kep = document.createElement("img")
+                        kep.setAttribute("src", "kartya.png")
+                        kep.setAttribute("id", "kartyaKep");
+                        document.body.appendChild(kep);
+                        let tovabbGomb = document.createElement("button")
+                        tovabbGomb.setAttribute("id", "mehetunkTovabb")
+                        tovabbGomb.textContent = "Mehetünk tovább"
+                        document.body.appendChild(tovabbGomb);
+                        tovabbGomb.addEventListener("click",
+                            function () {
+                                alert("gsfd")
+                            })
+
+
                     })
-                
-                
-                })
-                gomb.textContent="Kezdőthet az utolsó utazás?!";
+                gomb.textContent = "Kezdőthet az utolsó utazás?!";
                 document.body.appendChild(gomb);
-                
+
                 document.body.removeChild(done);
                 document.body.removeChild(menu);
             }
 
 
             class Jatekosmenu {
-                constructor(jatekos, kartya,pia) {
+                constructor(jatekos, kartya, pia) {
                     this.jatekos = jatekos;
                     this.kartya = [];
                     this.pia = [];
                 }
-                }
             }
-        
+        }
+
     </script>
 </body>
+
 </html>
