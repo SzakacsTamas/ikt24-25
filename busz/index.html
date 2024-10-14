@@ -25,9 +25,7 @@
     <button id="done" onclick="inditas0()">Kész</button>
 
 
-    <div id="jatekosMenu">
-       
-    </div>
+
     <script>
         function inditas0() {
             let jatekosokSzama = document.getElementById("jatekosokSzama")
@@ -49,6 +47,17 @@
                             function () {
                                 alert("gsfd")
                             })
+
+                        let jatekosMenu = document.createElement("div")
+                        jatekosMenu.setAttribute("id", "jatekosMenu")
+                        jatekosMenu.textContent = "Játékos"
+                        document.body.appendChild(jatekosMenu);
+
+                        let eddigPia = document.createElement("eddigPia")
+                        eddigPia.setAttribute("id", "eddigPia")
+                        eddigPia.textContent = "Pia"
+                        document.body.appendChild(eddigPia);
+
 
 
                     })
