@@ -184,10 +184,11 @@ body {
     padding: none;
     margin: none;
     line-height: 0px;
+    padding-top: 5px;
 }
 
 #kepPia{
-    width: 11%;
+    width: 10%;
     height: 18%;
     position: relative;
     margin: 0px;     /* Képek közti margó eltávolítása */
@@ -196,4 +197,37 @@ body {
     border: 0px;
     display: inline-block; /* A képek egymás mellé igazítása */
     vertical-align: middle; 
+}
+#kartyaDiv{
+    position: fixed;
+    width: 15%;
+    
+    height: 50%;
+    background-color: azure;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+}
+#szamDiv{
+    position: fixed;
+    width: 15%;
+    font-size: 30px;
+    height: 15%;
+    background-color: azure;
+    top: 15%;
+    transform: translate(-50%, -50%);
+    left: 15%;
+    background-color: red;
+}
+
+#szamDiv2{
+    position: fixed;
+    width: 15%;
+    
+    height: 15%;
+    background-color: azure;
+    top: 85%;
+    transform: translate(-50%, -50%);
+    left: 85%;
+    background-color: red;
 }
