@@ -11,8 +11,11 @@
 <body>
     <form action="" id="menu">
         <div id="szabaly1">
-            <label for="jatekosokSzama">Hányan szeretnétek játszani?</label><br>
+            
+                <label for="jatekosokSzama">Hányan szeretnétek játszani?</label><br>
             <input type="number" id="jatekosokSzama" max="15" min="2">
+           
+            
         </div>
         <div id="szabaly2">
             <label for="mode">Esetleg hardmode báttttya?</label><br>
@@ -24,12 +27,24 @@
     </form>
     <button id="done" onclick="inditas0()">Kész</button>
 
-
-    <div id="jatekosMenu">
-       
-    </div>
+    <button onclick="piaHozzadas()">
+        
+    </button>
+    
     <script>
+                                function piaHozzadas(){
+                            for (let i = 0; i < 1; i++) {
+                            let piaKep = document.createElement("img");
+                            piaKep.setAttribute("src", "pia.png");  // A kép forrása
+                          
+                            piaKep.setAttribute("id", "kepPia");
+                            
+                            // Kép hozzáadása a div-hez
+                            eddigPia.appendChild(piaKep);
+                        }
+                        }
         function inditas0() {
+            
             let jatekosokSzama = document.getElementById("jatekosokSzama")
             if (jatekosokSzama.value < 16 && jatekosokSzama.value > 1) {
                 let gomb = document.createElement("button")
@@ -50,9 +65,25 @@
                                 alert("gsfd")
                             })
 
+                        let jatekosMenu = document.createElement("div")
+                        jatekosMenu.setAttribute("id", "jatekosMenu")
+                        jatekosMenu.textContent = "Játékos"
+                        document.body.appendChild(jatekosMenu);
+
+                        let eddigPia = document.createElement("eddigPia")
+                        eddigPia.setAttribute("id", "eddigPia")
+
+                        
+
+
+
+
+                        document.body.appendChild(eddigPia);
+
+
 
                     })
-                gomb.textContent = "Kezdőthet az utolsó utazás?!";
+               
                 document.body.appendChild(gomb);
 
                 document.body.removeChild(done);

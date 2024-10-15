@@ -15,10 +15,10 @@ body {
     height: 50%;
     cursor: pointer;
     font-size: 5vw;
-
+    background-position: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-image: url(back.jpg);
-    background-repeat: no-repeat;
+    background-image: url(UU.jpg);
+   
     background-size: cover;
     border: 10px solid rgb(0, 0, 0);
     color: aliceblue;
@@ -27,11 +27,7 @@ body {
     /* Animáció hozzáadása */
 }
 
-#kezdo:hover {
-    width: 1100px;
-    height: 600px;
-    font-size: 110px;
-}
+
 
 .move-up {
     transform: translate(-50%, calc(-50% - 200px));
@@ -39,16 +35,17 @@ body {
 }
 
 #szabaly1 {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 30%;
     transform: translate(-50%, -50%);
     text-align: center;
     line-height: 100px;
-    width: 600px;
-    height: 300px;
-
+    width: 30%;
+    height: 35%;
+    background-position: center;
     font-size: 50px;
+    background-size: cover;
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-image: url(back3.jpg);
     border: 10px solid rgb(0, 0, 0);
@@ -65,21 +62,25 @@ body {
 }
 
 #szabaly2 {
-    position: absolute;
+    position: fixed;
+    background-position: center;
     top: 50%;
     left: 70%;
     transform: translate(-50%, -50%);
     text-align: center;
     line-height: 100px;
-    width: 600px;
-    height: 300px;
-
+    width: 30%;
+    height: 35%;
+    background-size: cover;
     font-size: 50px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-image: url(back3.jpg);
     border: 10px solid rgb(0, 0, 0);
     color: aliceblue;
     font-weight: bold;
+    justify-content: center; /* Tartalom középre igazítása */
+    align-items: center; /* Vertikális középre igazítás */
+    overflow: hidden; /* Elrejti a túlnyúló tartalmat */
 }
 
 #hard {
@@ -90,14 +91,14 @@ body {
 }
 
 #done {
-    position: absolute;
+    position: fixed;
     top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     line-height: 100px;
-    width: 250px;
-    height: 130px;
+    width: 10%;
+    height: 10%;
     cursor: pointer;
     font-size: 50px;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -108,8 +109,8 @@ body {
 }
 
 #done:hover {
-    width: 280px;
-    height: 160px;
+    width: 15%;
+    height: 15%;
     font-size: 60px;
 }
 
@@ -142,19 +143,57 @@ body {
     font-weight: bold;
 }
 #jatekosMenu {
-    position: absolute;
-    top: 75%;
+    position: fixed;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     line-height: 100px;
-    width: 800px;
-    height: 300px;
+
+    width: 50%;
+    height: 35%;
+
+
     border: 5px solid black;
-    font-size: 20px;
+    font-size: 100px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-image: url(tovabbGomb.webp);
     background-size: cover;
     color: aliceblue;
     font-weight: bold;
+}
+
+#eddigPia {
+    position: fixed;
+    top: 80%;
+    left: 87%;
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    text-align: center;
+    line-height: 100px;
+    width: 20%;
+    height: 35%;
+    border: 5px solid black;
+  
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url(piaHatter.png);
+    background-size: cover;
+    color: aliceblue;
+    font-weight: bold;
+    padding: none;
+    margin: none;
+    line-height: 0px;
+}
+
+#kepPia{
+    width: 11%;
+    height: 18%;
+    position: relative;
+    margin: 0px;     /* Képek közti margó eltávolítása */
+    padding: 0px; 
+    line-height: 0px;
+    border: 0px;
+    display: inline-block; /* A képek egymás mellé igazítása */
+    vertical-align: middle; 
 }
