@@ -50,16 +50,11 @@
                         }
 
 
-        function kartyaKeszit()
-        {
 
-            if(randomSzin==0){
-                randomSzam.style.color="red"
-            }
-            else{
-                randomSzam.style.color="black"
-            }
-        }
+
+
+            
+       
         function inditas0() {
             
             let jatekosokSzama = document.getElementById("jatekosokSzama")
@@ -76,14 +71,27 @@
                         {
                             let kartyaDiv=document.createElement("div")
                             kartyaDiv.setAttribute("id","kartyaDiv")
-                            kartyaKeszit()
+                           
 
                             let szamDiv=document.createElement("div")
                             szamDiv.setAttribute("id","szamDiv")
+                            //A DOM ELEMENKE VAN CSAK STYLE MODOSITASA EGY SZÁMNAK NINCS EZÉRT VAN ITT
+                            if(randomSzin==0){
+                                szamDiv.style.color="red"
+                                }
+                                else{
+                                    szamDiv.style.color="black"
+                                }
                             szamDiv.innerText=randomSzam
                             kartyaDiv.appendChild(szamDiv)
                             let szamDiv2=document.createElement("div")
                             szamDiv2.setAttribute("id","szamDiv2")
+                            if(randomSzin==0){
+                                szamDiv2.style.color="red"
+                                }
+                                else{
+                                    szamDiv2.style.color="black"
+                                }
                             szamDiv2.innerText=randomSzam
                             kartyaDiv.appendChild(szamDiv2)
                             document.body.appendChild(kartyaDiv)

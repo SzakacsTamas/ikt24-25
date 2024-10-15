@@ -207,27 +207,30 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
     left: 50%;
+    border-radius: 5%;
 }
 #szamDiv{
     position: fixed;
     width: 15%;
-    font-size: 30px;
+    font-size: 100px;
     height: 15%;
     background-color: azure;
-    top: 15%;
+    top: 10%;
     transform: translate(-50%, -50%);
     left: 15%;
-    background-color: red;
+    font-weight: bold;
+    font-family: sans-serif;
 }
 
 #szamDiv2{
     position: fixed;
     width: 15%;
-    
+    font-size: 100px;
     height: 15%;
     background-color: azure;
-    top: 85%;
+    top: 80%;
     transform: translate(-50%, -50%);
-    left: 85%;
-    background-color: red;
+    left: 80%;
+    font-weight: bold;
+    font-family: sans-serif;
 }
