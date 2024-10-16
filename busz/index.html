@@ -30,30 +30,119 @@
     <button onclick="piaHozzadas()">
         
     </button>
+    <button onclick="kartyaKeszit()">asdasdasdsd</button>
     
     <script>
-                    let szin=[0,1];
+            let szin=[0,1];
             let szamok=[2,3,4,5,6,7,8,9,10];
             let szimbolum=[0,1,2,3];
             let randomSzin = Math.floor(Math.random() * szin.length);
-            let randomSzam = Math.floor(Math.random() * szamok.length+1)+2;
-                                function piaHozzadas(){
-                            for (let i = 0; i < 1; i++) {
-                            let piaKep = document.createElement("img");
-                            piaKep.setAttribute("src", "pia.png");  // A kép forrása
-                          
-                            piaKep.setAttribute("id", "kepPia");
+            let randomSzam = Math.floor(Math.random() * szamok.length+1)+1;
+
+            function piaHozzadas()
+            {
+                for (let i = 0; i < 1; i++) 
+                {
+                let piaKep = document.createElement("img");
+                piaKep.setAttribute("src", "pia.png");  // A kép forrása
+                piaKep.setAttribute("id", "kepPia");
+                // Kép hozzáadása a div-hez
+                eddigPia.appendChild(piaKep);
+                }
+            }
+
+
+
+
+
+                        function kartyaKeszit()
+                        {
+                            //SZIMBOLUM
+                            let szimbolum = document.createElement("img")
+                            szimbolum.setAttribute("id","szimbolum")
+                            //FO KARTYA
+                            let kartyaDiv=document.createElement("div")
+                            kartyaDiv.setAttribute("id","kartyaDiv")
+                            //FELSO SZAM
+                            let szamDiv=document.createElement("div")
+                            szamDiv.setAttribute("id","szamDiv")
+                            szamDiv.innerText=randomSzam
+                            //ALSO SZAM
+                            let szamDiv2=document.createElement("div")
+                            szamDiv2.setAttribute("id","szamDiv2")
+                            szamDiv2.innerText=randomSzam
+                            //A DOM ELEMENKE VAN CSAK STYLE MODOSITASA EGY SZÁMNAK NINCS EZÉRT VAN ITT
+                            //FELSO SZAM, EBBE VAN BENN A SZIMBOLUM IS 
+                            //HA PIROS
+                            if(randomSzin==0)
+                            {
+                                szamDiv.style.color="red"
+                                let randomSzimbolum = Math.floor(Math.random() * szin.length);
+                                console.log(randomSzimbolum)
+                                if(randomSzimbolum=="0")
+                                    {
+                                        szimbolum.setAttribute("src","kor.png")
+                                    }
+                                if(randomSzimbolum=="1")
+                                    {
+                                        szimbolum.setAttribute("src","karo.png")
+                                    }
+
+                           
+                            }
+                            //HA FEKETE
+                            else
+                            {
+                                    szamDiv.style.color="black"
+                                    let randomSzimbolum = Math.floor(Math.random() * szin.length)+2;
+                                    if(randomSzimbolum=="2")
+                                    {
+                                        szimbolum.setAttribute("src","treff.png")
+                                    }
+                                    if(randomSzimbolum=="3")
+                                    {
+                                        szimbolum.setAttribute("src","pikk.png")
+                                    }
                             
-                            // Kép hozzáadása a div-hez
-                            eddigPia.appendChild(piaKep);
+                            }
+                            //FELSO SZAM Alahuzasok
+                            if (szamDiv.innerHTML == "6" || szamDiv.innerHTML == "9") 
+                            {
+                                szamDiv.style.textDecoration = "underline";  
+                            } 
+                            else
+                            {
+                                szamDiv.style.textDecoration = "none";    
+                            }   
+                            
+
+                            //ALSO SZAM
+                            //HA PIROS
+                            if(randomSzin==0)
+                            {
+                                szamDiv2.style.color="red"
+                            }
+                            //HA FEKETE
+                            else
+                            {
+                                szamDiv2.style.color="black"
+                            }
+                            //ALSO SZAM Alahuzasok
+                            if (szamDiv2.innerHTML == "6" || szamDiv2.innerHTML == "9") 
+                            {
+                                szamDiv2.style.textDecoration = "underline"; 
+                            } 
+                            else
+                            {
+                                szamDiv2.style.textDecoration = "none";     
+                            }
+                            
+                            kartyaDiv.appendChild(szamDiv)
+                            kartyaDiv.appendChild(szamDiv2)
+                            kartyaDiv.appendChild(szimbolum) 
+                            document.body.appendChild(kartyaDiv)
+
                         }
-                        }
-
-
-
-
-
-            
        
         function inditas0() {
             
@@ -67,36 +156,7 @@
                         let kep = document.createElement("img")
                         kep.setAttribute("src", "kartya.png")
                         kep.setAttribute("id", "kartyaKep");
-                        kep.addEventListener("click",function()
-                        {
-                            let kartyaDiv=document.createElement("div")
-                            kartyaDiv.setAttribute("id","kartyaDiv")
-                           
-
-                            let szamDiv=document.createElement("div")
-                            szamDiv.setAttribute("id","szamDiv")
-                            //A DOM ELEMENKE VAN CSAK STYLE MODOSITASA EGY SZÁMNAK NINCS EZÉRT VAN ITT
-                            if(randomSzin==0){
-                                szamDiv.style.color="red"
-                                }
-                                else{
-                                    szamDiv.style.color="black"
-                                }
-                            szamDiv.innerText=randomSzam
-                            kartyaDiv.appendChild(szamDiv)
-                            let szamDiv2=document.createElement("div")
-                            szamDiv2.setAttribute("id","szamDiv2")
-                            if(randomSzin==0){
-                                szamDiv2.style.color="red"
-                                }
-                                else{
-                                    szamDiv2.style.color="black"
-                                }
-                            szamDiv2.innerText=randomSzam
-                            kartyaDiv.appendChild(szamDiv2)
-                            document.body.appendChild(kartyaDiv)
-
-                        })
+                        kep.addEventListener("click",asd())
                         document.body.appendChild(kep);
                         let tovabbGomb = document.createElement("button")
                         tovabbGomb.setAttribute("id", "mehetunkTovabb")
@@ -122,7 +182,7 @@
 
                         document.body.appendChild(eddigPia);
 
-
+                    
 
                     })
                

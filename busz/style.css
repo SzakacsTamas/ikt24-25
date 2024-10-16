@@ -234,4 +234,18 @@ body {
     font-weight: bold;
     font-family: sans-serif;
     rotate: 180deg;
+    
+}
+#szimbolum{
+    position: fixed;
+    width: 45%;
+    font-size: 100px;
+    height: 30%;
+    
+    
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+  
+    
 }
