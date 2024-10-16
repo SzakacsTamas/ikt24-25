@@ -38,9 +38,12 @@
             let szimbolum=[0,1,2,3];
             let randomSzin = Math.floor(Math.random() * szin.length);
             let randomSzam = Math.floor(Math.random() * szamok.length+1)+1;
-
+            let piaSzamlalo=1
             function piaHozzadas()
             {
+                let piaSzamlalo=document.createElement("div")
+                piaSzamlalo.setAttribute("id","piaSzamlalo")
+                piaSzamlalo.innerText=piaSzamlalo.value
                 for (let i = 0; i < 1; i++) 
                 {
                 let piaKep = document.createElement("img");
@@ -48,6 +51,8 @@
                 piaKep.setAttribute("id", "kepPia");
                 // Kép hozzáadása a div-hez
                 eddigPia.appendChild(piaKep);
+                document.body.appendChild(piaSzamlalo)
+
                 }
             }
 
@@ -156,7 +161,7 @@
                         let kep = document.createElement("img")
                         kep.setAttribute("src", "kartya.png")
                         kep.setAttribute("id", "kartyaKep");
-                        kep.addEventListener("click",asd())
+                       
                         document.body.appendChild(kep);
                         let tovabbGomb = document.createElement("button")
                         tovabbGomb.setAttribute("id", "mehetunkTovabb")
@@ -170,10 +175,18 @@
                         let jatekosMenu = document.createElement("div")
                         jatekosMenu.setAttribute("id", "jatekosMenu")
                         jatekosMenu.textContent = "Játékos"
-                        document.body.appendChild(jatekosMenu);
+                        
+
+                        let piaSzamlalo=document.createElement("div")
+                        piaSzamlalo.setAttribute("id", "piaSzamlalo")
+                        //PIA SZÁMÁLÓT AKAROK HOZZÁADNI
+                        piaSzamlalo.innerHTML = "x"+piaSzamlalo.value
+                        jatekosMenu.appendChild(piaSzamlalo);
 
                         let eddigPia = document.createElement("eddigPia")
                         eddigPia.setAttribute("id", "eddigPia")
+
+                        document.body.appendChild(jatekosMenu);
 
                         
 
