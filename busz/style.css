@@ -228,9 +228,10 @@ body {
     font-size: 100px;
     height: 15%;
     background-color: azure;
-    top: 80%;
+    top: 75%;
     transform: translate(-50%, -50%);
-    left: 80%;
+    left: 70%;
     font-weight: bold;
     font-family: sans-serif;
+    rotate: 180deg;
 }

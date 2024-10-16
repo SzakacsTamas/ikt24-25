@@ -33,10 +33,10 @@
     
     <script>
                     let szin=[0,1];
-            let szamok=[1,2,3,4,5,6,7,8,9,10];
+            let szamok=[2,3,4,5,6,7,8,9,10];
             let szimbolum=[0,1,2,3];
             let randomSzin = Math.floor(Math.random() * szin.length);
-            let randomSzam = Math.floor(Math.random() * szamok.length);
+            let randomSzam = Math.floor(Math.random() * szamok.length+1)+2;
                                 function piaHozzadas(){
                             for (let i = 0; i < 1; i++) {
                             let piaKep = document.createElement("img");
