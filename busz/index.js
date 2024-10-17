@@ -1,8 +1,4 @@
-let szin = [0, 1];
-let szamok = [2, 3, 4, 5, 6, 7, 8, 9, 10];
-let szimbolum = [0, 1, 2, 3];
-let randomSzin = Math.floor(Math.random() * szin.length);
-let randomSzam = Math.floor(Math.random() * szamok.length + 1) + 1;
+
 let piaSzamlaloSzam = 0;
 let piaSzamlalo = document.createElement("div");
 piaSzamlalo.innerHTML = "x0"
@@ -31,6 +27,13 @@ function piaHozzadas() {
 }
 
 function kartyaKeszit() {
+  let szin = [0, 1];
+let szamok = [2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+
+let randomSzam = Math.floor(Math.random() * szamok.length + 1) + 1;
+  let randomSzin = Math.floor(Math.random() * szin.length);
+  
   //SZIMBOLUM
   let szimbolum = document.createElement("img");
   szimbolum.setAttribute("id", "szimbolum");
