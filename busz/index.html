@@ -38,7 +38,7 @@
             let szimbolum=[0,1,2,3];
             let randomSzin = Math.floor(Math.random() * szin.length);
             let randomSzam = Math.floor(Math.random() * szamok.length+1)+1;
-            let piaSzamlalo=1
+            let piaSzamlaloSzam=0
             function piaHozzadas()
             {
                 let piaSzamlalo=document.createElement("div")
@@ -51,8 +51,9 @@
                 piaKep.setAttribute("id", "kepPia");
                 // Kép hozzáadása a div-hez
                 eddigPia.appendChild(piaKep);
+                piaSzamlaloSzam++
                 document.body.appendChild(piaSzamlalo)
-
+                
                 }
             }
 
@@ -180,7 +181,7 @@
                         let piaSzamlalo=document.createElement("div")
                         piaSzamlalo.setAttribute("id", "piaSzamlalo")
                         //PIA SZÁMÁLÓT AKAROK HOZZÁADNI
-                        piaSzamlalo.innerHTML = "x"+piaSzamlalo.value
+                        piaSzamlalo.innerHTML = "x"+piaSzamlaloSzam
                         jatekosMenu.appendChild(piaSzamlalo);
 
                         let eddigPia = document.createElement("eddigPia")
