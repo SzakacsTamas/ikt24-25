@@ -11,8 +11,8 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     line-height: 100px;
-    width: 50%;
-    height: 50%;
+    min-width: 45%;
+    min-height: 45%;
     cursor: pointer;
     font-size: 5vw;
     background-position: center;
