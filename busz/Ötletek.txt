@@ -1,1 +1,3 @@
 Az osztály létehoz annyi játékos objektumot, amennyit megadunk az első menüben
+
+Dátum-Nevek-Helyszín-Ki buszozik-Kép a végén

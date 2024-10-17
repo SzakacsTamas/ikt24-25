@@ -5,7 +5,7 @@ body {
 }
 
 #kezdo {
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -16,6 +16,7 @@ body {
     cursor: pointer;
     font-size: 5vw;
     background-position: center;
+    background-attachment: absolute;
     font-family: sans-serif;
     background-image: url(UU.jpg);
    
