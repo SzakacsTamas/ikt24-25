@@ -12,6 +12,9 @@ piaSzamlalo.setAttribute("id", "piaSzamlalo");
 let eddigPia = document.createElement("eddigPia");
 eddigPia.setAttribute("id", "eddigPia");
 
+let kerdes = document.createElement("kerdes");
+kerdes.setAttribute("id", "kerdes");
+
 function piaHozzadas() {
   let piaSzamlalo2 = document.createElement("div");
   piaSzamlalo2.setAttribute("id", "piaSzamlalo2");
@@ -106,17 +109,36 @@ function inditas0() {
     gomb.setAttribute("id", "kezdo");
     gomb.addEventListener("click", function () {
       document.body.removeChild(document.getElementById("kezdo"));
+      
+      
+      
+
       let kep = document.createElement("img");
-      kep.setAttribute("src", "kartya.png");
+      kep.setAttribute("src", "aranyKartya.png");
       kep.setAttribute("id", "kartyaKep");
 
-      document.body.appendChild(kep);
+      let diszDiv =document.createElement("div")
+      diszDiv.setAttribute("id","diszDiv")
+      diszDiv.appendChild(kep);
+
+      document.body.appendChild(diszDiv);
       let tovabbGomb = document.createElement("button");
       tovabbGomb.setAttribute("id", "mehetunkTovabb");
-      tovabbGomb.textContent = "Mehetünk tovább";
+      tovabbGomb.textContent = "Play";
       document.body.appendChild(tovabbGomb);
       tovabbGomb.addEventListener("click", function () {
-        alert("gsfd");
+        let kerdesDiv=document.createElement("div")
+        kerdesDiv.setAttribute("id","kerdesDiv")
+        kerdesDiv.textContent="Milyen szín?"
+        let gomb1=document.createElement("button")
+        let gomb2=document.createElement("button")
+        gomb1.setAttribute("class","kerdesek")
+        gomb2.setAttribute("class","kerdesek")
+        kerdesDiv.appendChild(gomb1)
+        kerdesDiv.appendChild(gomb2)
+        document.body.appendChild(kerdesDiv)
+
+
       });
 
       let jatekosMenu = document.createElement("div");
@@ -124,17 +146,20 @@ function inditas0() {
       jatekosMenu.textContent = "Játékos";
       jatekosMenu.appendChild(piaSzamlalo);
 
+
+
       let diszPiaKep = document.createElement("img");
       diszPiaKep.setAttribute("src", "pia.png"); // A kép forrása
       diszPiaKep.setAttribute("id", "diszPiaKep");
       jatekosMenu.appendChild(diszPiaKep)
       document.body.appendChild(jatekosMenu);
-
+      document.body.appendChild(kerdes)
       document.body.appendChild(eddigPia);
+      
     });
 
+    
     document.body.appendChild(gomb);
-
     document.body.removeChild(done);
     document.body.removeChild(menu);
   }
