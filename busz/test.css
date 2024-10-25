@@ -1,0 +1,140 @@
+body{
+    display: flex;
+    height: 100vh;
+    background-image: url(back1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#szabaly1{
+position: fixed;
+top: 50%;
+left: 20%;
+transform: translate(-50%, -50%);
+background-position: center;
+font-size: 35px;
+background-size: cover;
+font-family: sans-serif;
+background-image: url(back3.jpg);
+border: 5px solid rgb(0, 0, 0);
+color: aliceblue;
+font-weight: bold;
+text-align: center;
+
+}
+#szabaly2{
+    position: fixed;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    background-position: center;
+    font-size: 35px;
+    background-size: cover;
+    font-family: sans-serif;
+    background-image: url(back3.jpg);
+    border: 5px solid rgb(0, 0, 0);
+    color: aliceblue;
+    font-weight: bold;
+    text-align: center;
+    
+    }
+#jatekosokSzama {
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+#hard {
+    width: 10vw;
+    height: 6vh;
+    cursor: pointer;
+    text-align: center;
+}
+#done {
+    position: fixed;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+    width: 10%;
+    height: 10%;
+    cursor: pointer;
+    font-size: 30px;
+    font-family: sans-serif;
+    background-image: url(gombfa2.avif);
+    background-size: cover;
+    color: aliceblue;
+    font-weight: bold;
+}
+/*TELEFON*/
+@media only screen and (max-width: 600px) 
+{
+#done{
+    width: 50vw;
+    height: 13vh;
+    font-size: 8vw;
+    
+}
+#szabaly1 {
+    width: 60vw;
+    height: 22vh;
+    left: 50%;
+    font-size: 6vw;
+    top: 25%;
+    padding-top: 20px;
+
+    ;}
+#jatekosokSzama{
+    width: 9vw;
+    height: 8vw;
+}
+#szabaly2 {
+    width: 60vw;
+    height: 22vh;
+    left: 50%;
+    font-size: 6vw;
+    top: 55%;
+    padding-top: 20px;
+
+    ;}
+#hard {
+    width: 10vw;
+    height: 6vh;
+    cursor: pointer;
+    text-align: center;
+    }
+}
+
+@media only screen and (min-width: 1200px) 
+{
+#szabaly1 {
+width: 30vw;
+height: 40vh;
+left: 25%;
+padding: 1vw;}
+#szabaly2 {
+    width: 30vw;
+    height: 40vh;
+    left: 75%;
+    padding: 1vw;
+}
+#jatekosokSzama{
+    width: 4vw;
+    height: 4vw;
+}
+
+#hard {
+    width: 5vw;
+    height: 5vw;
+    cursor: pointer;
+    text-align: center;
+    }
+    #done{
+        width: 20vw;
+        height: 13vh;
+        font-size: 3vw;
+        
+    }
+} 
