@@ -110,7 +110,7 @@ function inditas0() {
     gomb.addEventListener("click", function () {
       document.body.removeChild(document.getElementById("kezdo"));
       let kep = document.createElement("img");
-      kep.setAttribute("src", "kartya.png");
+      kep.setAttribute("src", "aranyCard.png");
       kep.setAttribute("id", "kartyaKep");
 
       document.body.appendChild(kep);

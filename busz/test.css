@@ -68,6 +68,41 @@ text-align: center;
     color: aliceblue;
     font-weight: bold;
 }
+#kezdo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 100px;
+    min-width: 45%;
+    min-height: 45%;
+    cursor: pointer;
+    font-size: 5vw;
+    background-position: center;
+    background-attachment: absolute;
+    font-family: sans-serif;
+    background-image: url(UU.jpg);
+   
+    background-size: cover;
+    border: 10px solid rgb(0, 0, 0);
+    color: aliceblue;
+    font-weight: bold;
+    transition: transform 1s ease;
+    /* Animáció hozzáadása */
+}
+#kartyaKep {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 100px;
+
+
+}
+
+
 /*TELEFON*/
 @media only screen and (max-width: 600px) 
 {
@@ -87,8 +122,8 @@ text-align: center;
 
     ;}
 #jatekosokSzama{
-    width: 9vw;
-    height: 8vw;
+    width: 8vw;
+    height: 7vw;
 }
 #szabaly2 {
     width: 60vw;
@@ -105,7 +140,53 @@ text-align: center;
     cursor: pointer;
     text-align: center;
     }
+#kartyaKep{
+    height: 80vw;
+    width: 80vw;
+    
 }
+}
+
+/*-------------------*/
+@media only screen and (min-width: 600px) 
+{
+#done{
+    width: 30vw;
+    height: 15vh;
+    font-size: 4vw;
+    
+}
+#szabaly1 {
+    width: 35vw;
+    height: 40vh;
+    left: 22%;
+    font-size: 3vw;
+    
+    padding-top: 20px;
+
+    ;}
+#jatekosokSzama{
+    width: 4.5vw;
+    height: 4vw;
+}
+#szabaly2 {
+    width: 35vw;
+    height: 40vh;
+    left: 78%;
+    font-size: 3vw;
+    
+    padding-top: 20px;
+
+    ;}
+#hard {
+    width: 10vw;
+    height: 6vh;
+    cursor: pointer;
+    text-align: center;
+    }
+}
+
+
 
 @media only screen and (min-width: 1200px) 
 {
