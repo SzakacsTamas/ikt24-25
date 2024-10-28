@@ -189,9 +189,9 @@ text-align: center;
     border: 5px solid black;
 
     font-family: sans-serif;
-    background-image: url(kerdes.jpg);
+    background-image: url(a.avif);
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     color: aliceblue;
     font-weight: bold;
 }
