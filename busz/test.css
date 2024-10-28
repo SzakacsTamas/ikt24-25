@@ -41,7 +41,7 @@ text-align: center;
 #jatekosokSzama {
     width: 30px;
     height: 30px;
-    font-size: 25px;
+    font-size: 12px;
     text-align: center;
     cursor: pointer;
 }
@@ -69,14 +69,14 @@ text-align: center;
     font-weight: bold;
 }
 #kezdo {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     line-height: 100px;
-    min-width: 45%;
-    min-height: 45%;
+    height: 50vh;
+    width: 80vw;
     cursor: pointer;
     font-size: 5vw;
     background-position: center;
@@ -88,28 +88,147 @@ text-align: center;
     border: 10px solid rgb(0, 0, 0);
     color: aliceblue;
     font-weight: bold;
-    transition: transform 1s ease;
-    /* Animáció hozzáadása */
+
 }
 #kartyaKep {
     position: fixed;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+
+
+}
+#mehetunkTovabb {
+    position: fixed;
     top: 50%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+   
+    width: 200px;
+    height: 100px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: sans-serif;
+    background-image: url(tovabbGomb2.jpg);
+    background-size: cover;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+#jatekosMenu {
+    position: fixed;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     line-height: 100px;
 
 
+
+    border: 5px solid black;
+
+    font-family: sans-serif;
+    background-image: url(talan.webp);
+    background-size: cover;
+    color: aliceblue;
+    font-weight: bold;
+
+}
+#jatekosMenuNev{
+    position: fixed;
+    font-size: 100%;
+    display: inline;
+    text-align: center;
+    top: -30%;
+    left: 5%;
+}
+
+#piaSzamlalo
+{
+    position: fixed;
+    width: 45%;
+    font-size: 80%;
+    height: 30%;
+    
+    
+    top: 20%;
+    transform: translate(-50%, -50%);
+    left: 94%;
+  
+
+}
+#diszPiaKep {
+    position: fixed;
+    width: 7%;
+    height: 27%;
+    
+    
+    top: 17%;
+    transform: translate(-50%, -50%);
+    left: 85%;
+}
+#jatekosMenuHeader{
+    
+    width: 80%;
+    height: 20vh;
+    position: relative;
+}
+#kerdesekDiv{
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 100px;
+
+
+
+    border: 5px solid black;
+
+    font-family: sans-serif;
+    background-image: url(kerdes.jpg);
+    background-position: center;
+    background-size: cover;
+    color: aliceblue;
+    font-weight: bold;
 }
 
 
+#eddigPia{
+    position: fixed;
+    top: 80%;
+    left: 87%;
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    text-align: center;
+    line-height: 100px;
+    width: 20%;
+    height: 35%;
+    border: 5px solid black;
+    font-family: sans-serif;
+    background-image: url(piaBack2.jpg);
+    background-size: cover;
+    color: aliceblue;
+    font-weight: bold;
+    padding: none;
+    margin: none;
+    line-height: 0px;
+    padding-top: 5px;
+}
 /*TELEFON*/
 @media only screen and (max-width: 600px) 
 {
+#eddigPia{
+    display: none;
+}
 #done{
     width: 50vw;
     height: 13vh;
-    font-size: 8vw;
+    font-size: 100%;
     
 }
 #szabaly1 {
@@ -124,6 +243,7 @@ text-align: center;
 #jatekosokSzama{
     width: 8vw;
     height: 7vw;
+    font-size: 100%;
 }
 #szabaly2 {
     width: 60vw;
@@ -144,6 +264,68 @@ text-align: center;
     height: 80vw;
     width: 80vw;
     
+}
+#mehetunkTovabb{
+    width: 25vw;
+    height: 25vw;
+    font-size: 100%;
+}
+#jatekosMenu{
+    width: 80vw;
+    height: 28vh;
+
+}
+#jatekosMenuNev{
+    position: fixed;
+    font-size: 8vw;
+    display: inline;
+    text-align: center;
+    top: -20%;
+    left: 5%;
+}
+#diszPiaKep{
+    position: fixed;
+    width: 10vw;
+    height: 15vw;
+    top: 15%;
+    transform: translate(-50%, -50%);
+    left: 78%;
+    display: inline;
+}
+#piaSzamlalo
+{
+    position: absolute;
+    font-size: 8vw;
+    width: 10vw;
+    height: 15vw;
+    top: -5%;
+    transform: translate(-50%, -50%);
+    left: 90%;
+  
+
+}
+#jatekosMenuHeader{
+    
+    width: 80vw;
+    height: 12vh;
+    position: relative;
+}
+#kepPia{
+    display: none;
+}
+#kerdesekDiv{
+    width: 55vw;
+    height: 30vh;
+    top: 45%;
+    left: 38%;
+}
+#kerdesekDivHeader{
+    display: inline;
+        top: -20%;
+        position: fixed;
+        left: 5%;
+        text-decoration: underline;
+        font-size: 6vw;
 }
 }
 
@@ -204,6 +386,7 @@ padding: 1vw;}
 #jatekosokSzama{
     width: 4vw;
     height: 4vw;
+    font-size: 90%;
 }
 
 #hard {
@@ -218,4 +401,97 @@ padding: 1vw;}
         font-size: 3vw;
         
     }
+#kezdo{
+    width: 50vw;
+    height: 60vh;
+}
+#kartyaKep{
+    height: 40vw;
+    width: 40vw;
+    top: 30%;
+    
+}
+#mehetunkTovabb{
+    width: 10vw;
+    height: 5vw;
+    font-size: 2vw;
+    left: 93%;
+    top: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+}
+#jatekosMenu{
+    width: 50vw;
+    height: 35vh;
+    top: 80%;
+    background-position: center;
+    background-size: cover;
+
+}
+#jatekosMenuNev{
+    position: fixed;
+    font-size: 2.5vw;
+    display: inline;
+    text-align: center;
+    top: -10%;
+    left: 2%;
+}
+#diszPiaKep{
+    position: fixed;
+    width: 4vw;
+    height: 6vw;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    left: 85%;
+    display: inline;
+}
+#piaSzamlalo
+{
+    position: absolute;
+    font-size: 3vw;
+    width: 10vw;
+    height: 15vw;
+    top: 75%;
+    transform: translate(-50%, -50%);
+    left: 118%;
+  
+
+}
+#kerdesekDiv{
+    width: 20vw;
+    height: 90vh;
+    top: 52.5%;
+    left: 13%;
+}
+#kerdesekDivHeader{
+    display: inline;
+        top: 0%;
+        position: fixed;
+        left: 5%;
+        text-decoration: underline;
+        font-size: 4vw;
+        text-align: center;
+        justify-content: center;
+}
+#eddigPia{
+
+    width: 20vw;
+    height: 35vh;
+    top: 80%;
+    display: inline-block;
+    position: fixed;
+    left: 87%;
+
+}
+#kepPia{
+    width: 10%;
+    height: 18%;
+    position: relative;
+    margin: 0px;     /* Képek közti margó eltávolítása */
+    padding: 0px; 
+    line-height: 0px;
+    border: 0px;
+    display: inline; /* A képek egymás mellé igazítása */
+    vertical-align: middle; 
+}
 } 
