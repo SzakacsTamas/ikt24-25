@@ -40,7 +40,7 @@ function alapPalya() {
     '<div id="italokSzama">x0</div>' +
     '<img src="pia.png" id="piaKep">';
   document.getElementById("kerdesekDiv").innerHTML +=
-    '<div id="kerdesekDivHeader">x Menet</div>';
+    '<div id="kerdesekDivHeader">Szünet</div>';
 }
 
 function elsoJatekResz() {
