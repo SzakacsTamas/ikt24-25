@@ -117,6 +117,10 @@ text-align: center;
     color: aliceblue;
     font-weight: bold;
 }
+#inditas:active{
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+}
 
 #jatekosMenu {
     position: fixed;
@@ -219,6 +223,83 @@ text-align: center;
     line-height: 0px;
     padding-top: 5px;
 }
+#pirosGomb
+{
+  top: 30%;
+  position: fixed;
+  right: 10%;
+  width: 17vw;
+  height: 17vh;
+  font-size: 1.5vw;
+  background-image: url(redwood.jpg);
+  background-size: cover;
+  color: white;
+  
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s ease;
+  user-select: none;
+  border: 1px solid red;
+
+    
+}
+
+#feketeGomb{
+    top: 60%;
+    
+    right: 10%;
+    position: fixed;
+    width: 17vw;
+    height: 17vh;
+    font-size: 1.5vw;
+    background-image: url(piaBack.jpg);
+    background-size: cover;
+    color: white;
+    
+    font-weight: bold;
+    cursor: pointer;
+    color: #ffffff;
+    transition: 0.5s ease;
+    user-select: none;
+    border: 1px solid black;
+}
+#feketeGomb:hover {
+  color: #ffffff;
+
+  border: 1px solid #000000;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px #252525, 0 0 20px #252525, 0 0 50px #252525,
+    0 0 100px #252525;
+}
+#feketeGomb:focus {
+    color: #00c8ff;
+   
+    border: 1px solid #000000;
+    text-shadow: 0 0 5px #00c8ff, 0 0 10px #00c8ff, 0 0 20px #00c8ff;
+    box-shadow: 0 0 5px black, 0 0 20px black, 0 0 50px black,
+      0 0 100px black;
+  }
+#pirosGomb:hover {
+    color: #ffffff;
+   
+    border: 1px solid red;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+    box-shadow: 0 0 5px #840000, 0 0 20px #840000, 0 0 50px #840000,
+      0 0 100px #840000;
+}
+#pirosGomb:focus {
+    color: #00c8ff;
+    border: 1px solid red;
+   
+    text-shadow: 0 0 5px #00c8ff, 0 0 10px #00c8ff, 0 0 20px #00c8ff;
+    box-shadow: 0 0 5px #840000, 0 0 20px #840000, 0 0 50px #840000,
+      0 0 100px #840000;
+}
+
+
+
+
+
 /*TELEFON*/
 @media only screen and (max-width: 600px) 
 {
@@ -326,10 +407,28 @@ text-align: center;
         left: 5%;
         text-decoration: underline;
         font-size: 6vw;
+        
 }
+#pirosGomb{
+
+    width: 23vw;
+    height: 20vh;
+    left: 5%;
+    top: 30%;
+    font-size: 5vw;
+}
+#feketeGomb{
+
+    width: 23vw;
+    height: 20vh;
+    left: 54%;
+    top: 30%;
+    font-size: 5vw;
 }
 
-/*-------------------*/
+}
+
+/*MInden más*/
 @media only screen and (min-width: 600px) 
 {
 #rajt{
@@ -365,6 +464,115 @@ text-align: center;
     height: 6vh;
     cursor: pointer;
     text-align: center;
+    }
+    #vegsoGomb{
+        width: 50vw;
+        height: 60vh;
+    }
+    #pakliKep{
+        height: 40vw;
+        width: 40vw;
+        top: 30%;
+        
+    }
+    #inditas{
+        width: 10vw;
+        height: 5vw;
+        font-size: 2vw;
+        left: 93%;
+        top: 50%;
+        position: fixed;
+        transform: translate(-50%, -50%);
+    }
+    #jatekosMenu{
+        width: 50vw;
+        height: 35vh;
+        top: 80%;
+        background-position: center;
+        background-size: cover;
+    
+    }
+    #jatekosMenuNev{
+        position: fixed;
+        font-size: 2.5vw;
+        display: inline;
+        text-align: center;
+        top: -10%;
+        left: 2%;
+    }
+    #piaKep{
+        position: fixed;
+        width: 4vw;
+        height: 6vw;
+        top: 20%;
+        transform: translate(-50%, -50%);
+        left: 85%;
+        display: inline;
+    }
+    #italokSzama
+    {
+        position: absolute;
+        font-size: 3vw;
+        width: 10vw;
+        height: 15vw;
+        top: 75%;
+        transform: translate(-50%, -50%);
+        left: 118%;
+      
+    
+    }
+    #kerdesekDiv{
+        width: 20vw;
+        height: 90vh;
+        top: 52.5%;
+        left: 13%;
+    }
+    #kerdesekDivHeader{
+        display: inline;
+            top: 0%;
+            position: fixed;
+            left: 5%;
+            text-decoration: underline;
+            font-size: 4vw;
+            text-align: center;
+            justify-content: center;
+    }
+    #italTarto{
+    
+        width: 20vw;
+        height: 35vh;
+        top: 80%;
+        display: inline-block;
+        position: fixed;
+        left: 87%;
+    
+    }
+    #kepPia{
+        width: 10%;
+        height: 18%;
+        position: relative;
+        margin: 0px;     /* Képek közti margó eltávolítása */
+        padding: 0px; 
+        line-height: 0px;
+        border: 0px;
+        display: inline; /* A képek egymás mellé igazítása */
+        vertical-align: middle; 
+    }
+    #feketeGomb{
+        top: 60%;
+        right: 10%;
+        position: fixed;
+        width: 17vw;
+        height: 17vh;
+        font-size: 1.5vw;
+    }
+    #pirosGomb{
+        top: 30%;
+        position: fixed;
+        right: 10%;
+        width: 17vw;
+        height: 17vh;
+        font-size: 1.5vw;
     }
 }
 
@@ -494,34 +702,20 @@ padding: 1vw;}
     display: inline; /* A képek egymás mellé igazítása */
     vertical-align: middle; 
 }
-#pirosGomb
-{
-  top: 30%;
-  position: fixed;
-  right: 10%;
-  width: 17vw;
-  height: 17vh;
-  background-color: red;
-  color: white;
-  font-size: 1.5vw;
-  font-weight: bold;
-  cursor: pointer;
-    
-
-    
-}
-
 #feketeGomb{
     top: 60%;
-    
     right: 10%;
     position: fixed;
     width: 17vw;
     height: 17vh;
-    background-color: black;
-    color: white;
     font-size: 1.5vw;
-    font-weight: bold;
-    cursor: pointer;
+}
+#pirosGomb{
+    top: 30%;
+    position: fixed;
+    right: 10%;
+    width: 17vw;
+    height: 17vh;
+    font-size: 1.5vw;
 }
 }
