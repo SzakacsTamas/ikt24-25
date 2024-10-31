@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busz Mozgatás és Kanyarodás Canvas-ben</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+
+        }
+        #speedDisplay {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="1000" height="500"></canvas>
+    <div id="speedDisplay">Sebesség: 0 km/h</div>
+    
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+        const speedDisplay = document.getElementById('speedDisplay');
+
+        // Kép betöltése
+        const busImage = new Image();
+        busImage.src = 'busz.png'; // A busz képének elérési útvonala
+        busImage.onload = () => {
+            animate(); // Animáció indítása, miután a kép betöltődött
+        };
+
+        // Busz adatai
+        let bus = {
+            x: canvas.width / 2, // Canvas középpontján kezd
+            y: canvas.height / 2,
+            width: 180,
+            height: 100,
+            maxSpeed: 3, // Maximális sebesség
+            currentSpeed: 0, // Jelenlegi sebesség
+            acceleration: 0.05, // Gyorsulási érték
+            angle: 0, // Kezdeti szög (0 fok, felfelé néz)
+            rotationSpeed: 0.008 // Forgási sebesség
+        };
+
+        const keys = {
+            ArrowUp: false,
+            ArrowDown: false,
+            ArrowLeft: false,
+            ArrowRight: false
+        };
+
+        // Busz kirajzolása forgatással
+        function drawBus() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height); // Canvas törlése
+
+            // Busz rajzolása forgatással
+            ctx.save(); // Eredeti állapot mentése
+            ctx.translate(bus.x, bus.y); // Elmozdulás a busz pozíciójához
+            ctx.rotate(bus.angle); // Forgatás a busz szöge szerint
+            ctx.drawImage(busImage, -bus.width / 2, -bus.height / 2, bus.width, bus.height);
+            ctx.restore(); // Eredeti állapot visszaállítása
+        }
+
+        // Pozíció frissítése
+        function updatePosition() {
+            // Sebesség növelése vagy csökkentése fokozatosan
+            if (keys.ArrowUp) {
+                bus.currentSpeed = Math.min(bus.currentSpeed + bus.acceleration, bus.maxSpeed);
+            } else if (keys.ArrowDown) {
+                bus.currentSpeed = Math.max(bus.currentSpeed - bus.acceleration, -bus.maxSpeed / 2);
+            } else {
+                bus.currentSpeed *= 0.95; // Lassítás
+                if (Math.abs(bus.currentSpeed) < 0.05) bus.currentSpeed = 0; // Megállás nullánál
+            }
+
+            // Mozgás az aktuális szög és sebesség alapján
+            bus.x += Math.cos(bus.angle) * bus.currentSpeed;
+            bus.y += Math.sin(bus.angle) * bus.currentSpeed;
+
+            // Forgatás csak akkor, ha halad
+            if (bus.currentSpeed !== 0) {
+                if (keys.ArrowLeft) {
+                    bus.angle -= bus.rotationSpeed;
+                }
+                if (keys.ArrowRight) {
+                    bus.angle += bus.rotationSpeed;
+                }
+            }
+
+            // A busz ne hagyja el a canvas-t
+            bus.x = Math.max(bus.width / 2, Math.min(canvas.width - bus.width / 2, bus.x));
+            bus.y = Math.max(bus.height / 2, Math.min(canvas.height - bus.height / 2, bus.y));
+
+            // Sebesség kijelzése (km/h)
+            const speedInKmH = Math.abs(bus.currentSpeed * 20).toFixed(1);
+            speedDisplay.textContent = `Sebesség: ${speedInKmH} km/h`;
+        }
+
+        // Animációs ciklus
+        function animate() {
+            updatePosition(); // Pozíció frissítése
+            drawBus(); // Busz kirajzolása
+            requestAnimationFrame(animate); // Újra meghívja magát
+        }
+
+        // Nyíl billentyű lenyomásának kezelése
+        window.addEventListener('keydown', (event) => {
+            if (keys.hasOwnProperty(event.key)) {
+                keys[event.key] = true;
+            }
+        });
+
+        // Nyíl billentyű felengedésének kezelése
+        window.addEventListener('keyup', (event) => {
+            if (keys.hasOwnProperty(event.key)) {
+                keys[event.key] = false;
+            }
+        });
+    </script>
+</body>
+</html>
