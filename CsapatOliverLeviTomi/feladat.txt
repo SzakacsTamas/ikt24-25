@@ -1,0 +1,10 @@
+Weblap sablon
+-kezdőlap
+-tartalmi oldal
+-2 gallériás rész
+-RESZPONZIV
+-HTML CSS JS külön
+-Készitők is jelenjenek meg
+
+A dokumentácio webes megjelenitessel.
+információ minden

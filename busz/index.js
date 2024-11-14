@@ -12,9 +12,7 @@ let kerdes = document.createElement("kerdes");
 kerdes.setAttribute("id", "kerdes");
 
 function piaHozzadas() {
-  let piaSzamlalo2 = document.createElement("div");
-  piaSzamlalo2.setAttribute("id", "piaSzamlalo2");
-  piaSzamlalo2.innerText = piaSzamlalo2.value;
+
   for (let i = 0; i < 1; i++) {
     let piaKep = document.createElement("img");
     piaKep.setAttribute("src", "pia.png"); // A kép forrása
@@ -24,7 +22,7 @@ function piaHozzadas() {
 
     eddigPia.appendChild(piaKep);
     piaSzamlaloSzam++;
-    piaSzamlalo.innerHTML = "x" + piaSzamlaloSzam;
+    piaSzamlalo.innerHTML = "x"+piaSzamlaloSzam;
     
   }
 }
@@ -112,6 +110,7 @@ function inditas0() {
     gomb.setAttribute("id", "kezdo");
     gomb.addEventListener("click", function () {
       document.body.removeChild(document.getElementById("kezdo"));
+<<<<<<< HEAD
       
       
       
@@ -129,6 +128,12 @@ function inditas0() {
       tovabbGomb.setAttribute("id", "mehetunkTovabb");
       tovabbGomb.textContent = "Play";
       document.body.appendChild(tovabbGomb);
+=======
+           
+      let tovabbGomb = document.createElement("button");
+      tovabbGomb.setAttribute("id", "mehetunkTovabb");
+      tovabbGomb.textContent = "Play";
+>>>>>>> 1a810d88fea395ee0ba358d747b26753500b4089
       tovabbGomb.addEventListener("click", function () {
         let kerdesDiv=document.createElement("div")
         kerdesDiv.setAttribute("id","kerdesDiv")
@@ -144,21 +149,52 @@ function inditas0() {
 
       });
 
+      let kep = document.createElement("img");
+      kep.setAttribute("src", "aranyCard.png");
+      kep.setAttribute("id", "kartyaKep");
+
       let jatekosMenu = document.createElement("div");
       jatekosMenu.setAttribute("id", "jatekosMenu");
-      jatekosMenu.textContent = "Játékos";
-      jatekosMenu.appendChild(piaSzamlalo);
+
+      let jatekosMenuNev=document.createElement("div")
+      jatekosMenuNev.setAttribute("id", "jatekosMenuNev");
+      jatekosMenuNev.textContent = "Játékos";
 
 
 
       let diszPiaKep = document.createElement("img");
       diszPiaKep.setAttribute("src", "pia.png"); // A kép forrása
       diszPiaKep.setAttribute("id", "diszPiaKep");
+<<<<<<< HEAD
       jatekosMenu.appendChild(diszPiaKep)
       document.body.appendChild(jatekosMenu);
       document.body.appendChild(kerdes)
       document.body.appendChild(eddigPia);
       
+=======
+
+      let jatekosMenuHeader=document.createElement("div")
+      jatekosMenuHeader.setAttribute("id","jatekosMenuHeader")
+      jatekosMenuHeader.appendChild(jatekosMenuNev)
+      jatekosMenuHeader.appendChild(piaSzamlalo)
+      jatekosMenuHeader.appendChild(diszPiaKep)
+
+      let kerdesekDiv =document.createElement("div")
+      kerdesekDiv.setAttribute("id","kerdesekDiv")
+      
+      let kerdesekDivHeader=document.createElement("div")
+      kerdesekDivHeader.setAttribute("id","kerdesekDivHeader")
+
+      kerdesekDivHeader.innerHTML="x Menet"
+      kerdesekDiv.appendChild(kerdesekDivHeader)
+      jatekosMenu.appendChild(jatekosMenuHeader)
+
+      document.body.appendChild(kep);
+      document.body.appendChild(tovabbGomb);
+      document.body.appendChild(jatekosMenu);
+      document.body.appendChild(eddigPia);
+      document.body.appendChild(kerdesekDiv)
+>>>>>>> 1a810d88fea395ee0ba358d747b26753500b4089
     });
 
     
