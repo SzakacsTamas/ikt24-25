@@ -1,0 +1,44 @@
+/* Alapstílusok */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.image-container {
+    position: relative;
+    width: 80%; /* A konténer szélessége */
+    height: 80%; /* A konténer magassága */
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-box {
+    position: absolute;
+    width: 48%;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+img {
+    width: 100%; /* A képek kitöltik a dobozt */
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Animációk */
+.fade-out {
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1;
+}
+#kep1{
+    top: 80%;
+    position: absolute;
+}
