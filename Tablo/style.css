@@ -12,11 +12,43 @@ body {
     background-size: cover;
     
 }
-#mpptBmnt{
+        /* Hide the default file input */
+        #kepBeker {
+            display: none;
+        }
+        /* Style the label as a button */
+        .custom-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            position: absolute;
+            top: 50%;
+            left: 5%;
+        }
+        .custom-btn:hover {
+            background-color: #0056b3;
+        }
+#kep-0{
     position: absolute;
-    width: 30vw;
-
-    
+    width: 27vw;
+    height: 68vh;
+    top: 17%;
+    left: 25%;
+    border: 5px solid rgb(56, 32, 0);
+}
+#kep-1{
+    position: absolute;
+    top: 17%;
+    left: 55%;
+    width: 27vw;
+    height: 68vh;
+    border: 5px solid rgb(56, 32, 0);
 }
 #logo{
     position: absolute;
@@ -24,7 +56,7 @@ body {
     height: 40vh;
 }
 .image-container {
-    position: relative;
+    position: absolute;
     width: 80%; /* A konténer szélessége */
     height: 80%; /* A konténer magassága */
     display: flex;
