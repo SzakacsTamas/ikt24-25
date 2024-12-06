@@ -7,8 +7,22 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #f4f4f4;
+    background-image: url(hatter.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
+#mpptBmnt{
+    position: absolute;
+    width: 30vw;
 
+    
+}
+#logo{
+    position: absolute;
+    width: 20vw;
+    height: 40vh;
+}
 .image-container {
     position: relative;
     width: 80%; /* A konténer szélessége */
@@ -34,6 +48,7 @@ img {
 .fade-out {
     opacity: 0;
 }
+
 
 .fade-in {
     opacity: 1;

@@ -1,54 +1,51 @@
-// Képek tározója - képek objektumokban tárolva (régi és új verzió)
-const imageSet = [
-    { old: 'orbanMost.jpg', new: 'orbanRegen.jpg' },
-    { old: 'regi.jpg', new: 'uj.jpg' },
-    { old: 'nap.webp', new: 'moon.jpg' },
-    // További képek itt hozzáadhatók
-];
+const mpptBmnt = document.getElementById('mpptBmnt');
+        const fjlLst = document.getElementById('fjlLst');
+        let kpFjlk = [];
+        let jlnlLg = 0;
+        let idztsId;
 
-let currentIndex = 0; // A kezdőképet jelző index
-let imageContainer = document.querySelector('.image-container');
+        const kpKzlt = () => {
+            fjlLst.innerHTML = '';
+            if (kpFjlk.length === 0) {
+                fjlLst.innerHTML = '<p>Nincsenek képfájlok a kiválasztott mappában.</p>';
+                return;
+            }
 
-// A képek frissítése
-function updateImages() {
-    // A konténer tartalmának törlése
-    imageContainer.innerHTML = '';
+            for (let i = 0; i < 2; i++) {
+                const fjl = kpFjlk[(jlnlLg + i) % kpFjlk.length];
+                
+                const tnr = document.createElement('div');
+                tnr.className = 'kp-tnr';
 
-    // A jelenlegi képek beállítása
-    const imageBox1 = document.createElement('div');
-    imageBox1.setAttribute("id","kep1")
-    imageBox1.classList.add('image-box');
-    imageBox1.innerHTML = `<img src="${imageSet[currentIndex].old}" alt="Régi kép">`;
+                const kp = document.createElement('img');
+                kp.src = URL.createObjectURL(fjl);
 
-    const imageBox2 = document.createElement('div');
-    imageBox2.classList.add('image-box');
-    imageBox2.innerHTML = `<img src="${imageSet[currentIndex].new}" alt="Új kép">`;
+                tnr.appendChild(kp);
+                fjlLst.appendChild(tnr);
+            }
 
-    imageContainer.appendChild(imageBox1);
-    imageContainer.appendChild(imageBox2);
+            jlnlLg = (jlnlLg + 2) % kpFjlk.length;
+        };
 
-    // Animációk alkalmazása: fade-out, majd fade-in
-    setTimeout(() => {
-        imageBox1.classList.add('fade-out');
-        imageBox2.classList.add('fade-out');
-    }, 0);
+        mpptBmnt.addEventListener('change', (esmn) => {
+            kpFjlk = [];
+            jlnlLg = 0;
+            clearInterval(idztsId);
 
-    setTimeout(() => {
-        // Képek frissítése az új indexekkel
-        currentIndex = (currentIndex + 1) % imageSet.length; // Váltás a képek között
+            const fjlk = esmn.target.files;
+            const kpKtrjts = ['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.webp', '.svg', '.jfif', '.avif'];
 
-        // Az új képek frissítése
-        imageBox1.innerHTML = `<img src="${imageSet[currentIndex].old}" alt="Régi kép">`;
-        imageBox2.innerHTML = `<img src="${imageSet[currentIndex].new}" alt="Új kép">`;
+            for (const fjl of fjlk) {
+                const ktrjts = fjl.name.substring(fjl.name.lastIndexOf('.')).toLowerCase();
+                if (kpKtrjts.includes(ktrjts)) {
+                    kpFjlk.push(fjl);
+                }
+            }
 
-        // A képek újra való megjelenítése
-        imageBox1.classList.remove('fade-out');
-        imageBox2.classList.remove('fade-out');
-        imageBox1.classList.add('fade-in');
-        imageBox2.classList.add('fade-in');
-    }, 1000); // 1 másodperces várakozás után történik a frissítés
-}
-
-// A képek cseréje időzítve
-//Az elején azért nem jön be semmi mert ott is van animáció 4másodpárc
-setInterval(updateImages, 1000); // Képek cseréje minden 4 másodpercben
+            if (kpFjlk.length > 0) {
+                kpKzlt();
+                idztsId = setInterval(kpKzlt, 1500);
+            } else {
+                fjlLst.innerHTML = '<p>Nincsenek képfájlok a kiválasztott mappában.</p>';
+            }
+        });
