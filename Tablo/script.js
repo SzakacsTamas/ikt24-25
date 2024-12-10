@@ -1,8 +1,9 @@
 const kepBeker = document.getElementById('kepBeker');
 const fajlokListaja = document.getElementById('fajlokListaja');
+const customBtns = document.getElementById('custom-btn');  // Gomb elem
 let kepFajlok = [];
 let jelenlegi = 0;
-let jelenlegiID=0
+let jelenlegiID = 0;
 let idozitesID;
 
 const mukodes = () => {
@@ -11,25 +12,22 @@ const mukodes = () => {
         fajlokListaja.innerHTML = '<p>Nincsenek képfájlok a kiválasztott mappában.</p>';
         return;
     }
-    jelenlegiID=0
+    jelenlegiID = 0;
     for (let i = 0; i < 2; i++) {
         const fjl = kepFajlok[(jelenlegi + i) % kepFajlok.length];
         
         const tnr = document.createElement('div');
         tnr.className = 'kp-tnr';
+        
+        tnr.style.backgroundImage = `url(${URL.createObjectURL(fjl)})`;
+        tnr.style.backgroundSize = 'cover';
+        tnr.style.backgroundPosition = 'center';
+        tnr.id = 'kep-' + (jelenlegiID = 0 + i);
 
-  
-
-        const kp = document.createElement('img');
-        kp.src = URL.createObjectURL(fjl);
-        kp.id = 'kep-' + (jelenlegiID=0 + i);
-
-        tnr.appendChild(kp);
         fajlokListaja.appendChild(tnr);
     }
 
     jelenlegi = (jelenlegi + 2) % kepFajlok.length;
-  
 };
 
 kepBeker.addEventListener('change', (esmn) => {
@@ -49,8 +47,24 @@ kepBeker.addEventListener('change', (esmn) => {
 
     if (kepFajlok.length > 0) {
         mukodes();
-        idztsId = setInterval(mukodes, 3000);
-    } else {
+        idozitesID = setInterval(mukodes, 3000);
+        
+        // Elrejtjük a customBtns gombot a képek feltöltése után
+        customBtns.style.display = 'none';
+
+
+
+        setTimeout(() => {
+            // Az összes `tnr` elemet animáljuk el
+            const tnrElems = document.querySelectorAll('.kp-tnr');
+            tnrElems.forEach(tnr => {
+                tnr.classList.add('hidden');  // Hozzáadjuk a `.hidden` osztályt, ami aktiválja az animációt
+            });
+        }, 500); // 500ms várakozás, hogy legyen idő a képek betöltésére
+    } 
+    
+    
+    else {
         fajlokListaja.innerHTML = '<p>Nincsenek képfájlok a kiválasztott mappában.</p>';
     }
 });

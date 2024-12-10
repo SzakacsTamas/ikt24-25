@@ -17,7 +17,7 @@ body {
             display: none;
         }
         /* Style the label as a button */
-        .custom-btn {
+        #custom-btn {
             display: inline-block;
             padding: 10px 20px;
             background-color: #007bff;
@@ -31,7 +31,7 @@ body {
             top: 50%;
             left: 5%;
         }
-        .custom-btn:hover {
+        #custom-btn:hover {
             background-color: #0056b3;
         }
 #kep-0{
@@ -41,7 +41,11 @@ body {
     top: 17%;
     left: 25%;
     border: 5px solid rgb(56, 32, 0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
+
+
+
 #kep-1{
     position: absolute;
     top: 17%;
@@ -49,6 +53,15 @@ body {
     width: 27vw;
     height: 68vh;
     border: 5px solid rgb(56, 32, 0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+#kep-1.hidden{
+    opacity: 0;
+    transform: scale(0.9);  /* Tükrözés, vagy kicsinyítés */
+}
+#kep-0.hidden{
+    opacity: 0;
+    transform: scale(0.9);  /* Tükrözés, vagy kicsinyítés */
 }
 #logo{
     position: absolute;
@@ -84,8 +97,4 @@ img {
 
 .fade-in {
     opacity: 1;
-}
-#kep1{
-    top: 80%;
-    position: absolute;
 }
