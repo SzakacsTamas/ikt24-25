@@ -54,13 +54,7 @@ kepBeker.addEventListener('change', (esmn) => {
 
 
 
-        setTimeout(() => {
-            // Az összes `tnr` elemet animáljuk el
-            const tnrElems = document.querySelectorAll('.kp-tnr');
-            tnrElems.forEach(tnr => {
-                tnr.classList.add('hidden');  // Hozzáadjuk a `.hidden` osztályt, ami aktiválja az animációt
-            });
-        }, 500); // 500ms várakozás, hogy legyen idő a képek betöltésére
+
     } 
     
     

@@ -34,35 +34,41 @@ body {
         #custom-btn:hover {
             background-color: #0056b3;
         }
+
+
+        @keyframes fadeIn {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+          }
+          @keyframes fadeOut {
+            100% { opacity: 0; }
+            0% { opacity: 1; }
+          }
 #kep-0{
+    animation: fadeOut 5s;
     position: absolute;
     width: 27vw;
     height: 68vh;
     top: 17%;
     left: 25%;
     border: 5px solid rgb(56, 32, 0);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    animation: fadeIn 5s;
 }
 
 
 
 #kep-1{
+    animation: fadeOut 5s;
     position: absolute;
     top: 17%;
     left: 55%;
     width: 27vw;
     height: 68vh;
     border: 5px solid rgb(56, 32, 0);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+  
+    animation: fadeIn 5s;
 }
-#kep-1.hidden{
-    opacity: 0;
-    transform: scale(0.9);  /* Tükrözés, vagy kicsinyítés */
-}
-#kep-0.hidden{
-    opacity: 0;
-    transform: scale(0.9);  /* Tükrözés, vagy kicsinyítés */
-}
+
 #logo{
     position: absolute;
     width: 20vw;
@@ -89,12 +95,4 @@ img {
     border-radius: 8px;
 }
 
-/* Animációk */
-.fade-out {
-    opacity: 0;
-}
 
-
-.fade-in {
-    opacity: 1;
-}
