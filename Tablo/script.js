@@ -7,12 +7,24 @@ let jelenlegiID = 0;
 let idozitesID;
 
 const mukodes = () => {
-    fajlokListaja.innerHTML = '';
+    fajlokListaja.innerHTML = '';  // Kiürítjük a tartalmat, mielőtt újra hozzáadnánk
+
     if (kepFajlok.length === 0) {
         fajlokListaja.innerHTML = '<p>Nincsenek képfájlok a kiválasztott mappában.</p>';
         return;
     }
+
     jelenlegiID = 0;
+
+    // Csak egyszer adjuk hozzá a fájlnevet az első képhez
+    let fileNameAdded = false;
+
+    // Eltávolítjuk az előző fájlnevet, ha van
+    const existingFileName = document.getElementById('emberNeve');
+    if (existingFileName) {
+        existingFileName.remove();
+    }
+
     for (let i = 0; i < 2; i++) {
         const fjl = kepFajlok[(jelenlegi + i) % kepFajlok.length];
         
@@ -23,6 +35,15 @@ const mukodes = () => {
         tnr.style.backgroundSize = 'cover';
         tnr.style.backgroundPosition = 'center';
         tnr.id = 'kep-' + (jelenlegiID = 0 + i);
+
+        // Csak az első képhez adjuk hozzá a fájlnevet
+        if (!fileNameAdded) {
+            const emberNeve = document.createElement('p');
+            emberNeve.textContent = fjl.name;  // Kép fájlneve
+            emberNeve.setAttribute("id", "emberNeve");
+            document.body.appendChild(emberNeve);  // Fájlnevet hozzáadjuk a body-hoz
+            fileNameAdded = true;  // Megjegyezzük, hogy a fájlnevet már hozzáadtuk
+        }
 
         fajlokListaja.appendChild(tnr);
     }
@@ -47,18 +68,11 @@ kepBeker.addEventListener('change', (esmn) => {
 
     if (kepFajlok.length > 0) {
         mukodes();
-        idozitesID = setInterval(mukodes, 3000);
+        idozitesID = setInterval(mukodes, 8000);
         
         // Elrejtjük a customBtns gombot a képek feltöltése után
         customBtns.style.display = 'none';
-
-
-
-
-    } 
-    
-    
-    else {
+    } else {
         fajlokListaja.innerHTML = '<p>Nincsenek képfájlok a kiválasztott mappában.</p>';
     }
 });

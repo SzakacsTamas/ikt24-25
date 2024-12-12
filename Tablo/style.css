@@ -36,29 +36,25 @@ body {
         }
 
 
-        @keyframes fadeIn {
-            0% { opacity: 1; }
-            100% { opacity: 0; }
-          }
-          @keyframes fadeOut {
-            100% { opacity: 0; }
-            0% { opacity: 1; }
+
+          @keyframes fade {
+            0%, 100% { opacity: 0; }
+            15%, 85% { opacity: 1; }
+            
           }
 #kep-0{
-    animation: fadeOut 5s;
+   animation: fade 8s linear;
     position: absolute;
     width: 27vw;
     height: 68vh;
     top: 17%;
     left: 25%;
     border: 5px solid rgb(56, 32, 0);
-    animation: fadeIn 5s;
+ 
 }
 
-
-
 #kep-1{
-    animation: fadeOut 5s;
+
     position: absolute;
     top: 17%;
     left: 55%;
@@ -66,9 +62,18 @@ body {
     height: 68vh;
     border: 5px solid rgb(56, 32, 0);
   
-    animation: fadeIn 5s;
+    animation: fade 8s linear;
 }
-
+#emberNeve
+{
+    display: inline;
+    position: absolute;
+    top: 0%;
+    left: 45%;
+    font-size: 3vw;
+    color: white;
+    font-family: cursive;
+}
 #logo{
     position: absolute;
     width: 20vw;
