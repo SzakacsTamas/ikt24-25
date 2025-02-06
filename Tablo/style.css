@@ -1,0 +1,103 @@
+/* Alapstílusok */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    background-image: url(hatter.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+        /* Hide the default file input */
+        #kepBeker {
+            display: none;
+        }
+        /* Style the label as a button */
+        #custom-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            position: absolute;
+            top: 50%;
+            left: 5%;
+        }
+        #custom-btn:hover {
+            background-color: #0056b3;
+        }
+
+
+
+          @keyframes fade {
+            0%, 100% { opacity: 0; }
+            15%, 85% { opacity: 1; }
+            
+          }
+#kep-0{
+   animation: fade 8s linear;
+    position: absolute;
+    width: 27vw;
+    height: 68vh;
+    top: 17%;
+    left: 25%;
+    border: 5px solid rgb(56, 32, 0);
+ 
+}
+
+#kep-1{
+
+    position: absolute;
+    top: 17%;
+    left: 55%;
+    width: 27vw;
+    height: 68vh;
+    border: 5px solid rgb(56, 32, 0);
+  
+    animation: fade 8s linear;
+}
+#emberNeve
+{
+    display: inline;
+    position: absolute;
+    top: 0%;
+    left: 45%;
+    font-size: 3vw;
+    color: white;
+    font-family: cursive;
+}
+#logo{
+    position: absolute;
+    width: 20vw;
+    height: 40vh;
+}
+.image-container {
+    position: absolute;
+    width: 80%; /* A konténer szélessége */
+    height: 80%; /* A konténer magassága */
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-box {
+    position: absolute;
+    width: 48%;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+img {
+    width: 100%; /* A képek kitöltik a dobozt */
+    height: auto;
+    border-radius: 8px;
+}
+
+
