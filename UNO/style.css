@@ -1,7 +1,26 @@
-body{
-    background-image: url(termeszet.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
+ body{
+     /* Vízszintesen középre helyezés */
+     /* Függőlegesen középre helyezés */
+    background-image: url(back.jpg);
+
     background-size: cover;
+    background-repeat: no-repeat;
+}
+#rakodoPlatform
+{
+    height: 500px;  /* Az oldal szélességének 80%-a */
+    width: 500px;  /* Maximális szélesség 500px */
+
+    background-color: wheat;
+    margin: auto;
+    border-radius: 10px;
+    vertical-align: middle;
     
+}
+#blankKartya
+{
+    height: 100px;
+    width: 100px;
+    color: white;
+    font-size: 30px;
 }
