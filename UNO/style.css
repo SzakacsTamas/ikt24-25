@@ -6,21 +6,23 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
-#rakodoPlatform
-{
-    height: 500px;  /* Az oldal szélességének 80%-a */
-    width: 500px;  /* Maximális szélesség 500px */
 
-    background-color: wheat;
-    margin: auto;
-    border-radius: 10px;
-    vertical-align: middle;
-    
-}
 #blankKartya
 {
-    height: 100px;
-    width: 100px;
-    color: white;
+    height: 200px;
+    width: 120px;
+    color: black;
     font-size: 30px;
+    border-radius: 5%;
+    text-align: center;
+    justify-content: center;
+
+    
 }
+#kartyaHatter
+{
+    background-color: white;
+    width: 100px;
+    height: 100px;
+}
+
