@@ -1,6 +1,16 @@
 let rakodoPlatform = document.createElement("div")
 rakodoPlatform.setAttribute("id", "rakodoPlatform")
+
 document.body.appendChild(rakodoPlatform)
+
+var slider = document.getElementById("jatekosokSzama");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+
 
 
 function kartyaKeszit() {
