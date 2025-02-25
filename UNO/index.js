@@ -1,13 +1,6 @@
-
-
-
-
-let rakodoPlatform = document.createElement("div")
-rakodoPlatform.setAttribute("id", "rakodoPlatform")
-
-document.body.appendChild(rakodoPlatform)
-
 var slider = document.getElementById("jatekosokSzama");
+var ertek=slider.value
+
 var output = document.getElementById("demo");
 output.innerHTML = slider.value;
 
@@ -17,17 +10,27 @@ slider.oninput = function() {
 
 function jatekosMenu()
 {
+    let jatekosMenuMainDiv=document.createElement("div")
+    jatekosMenuMainDiv.setAttribute("id","jatekosMenuMainDiv")
     for (let i = 0; i < jatekosokSzama.value; i++) {
+      //Eltuntetések
+      const szabalyDiv = document.getElementById("szabaly1");
+      szabalyDiv.style.display = "none";
+      const gombDiv = document.getElementById("done");
+      gombDiv.style.display = "none";
 
-
+      
         let jatekosMenuDiv=document.createElement("div")
         jatekosMenuDiv.setAttribute("id","jatekosMenuDiv") 
         let szovegDoboz = document.createElement("input")
         szovegDoboz.setAttribute("id", "szovegDoboz")
         szovegDoboz.setAttribute("placeholder","Játékosnév")
-    
         jatekosMenuDiv.appendChild(szovegDoboz)
-        document.body.append(jatekosMenuDiv)
+        jatekosMenuMainDiv.appendChild(jatekosMenuDiv)
+        
+        document.body.append(jatekosMenuMainDiv)
+        
+        
     
       }
 
