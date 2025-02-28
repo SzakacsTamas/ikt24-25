@@ -27,12 +27,23 @@ function jatekosMenu()
         szovegDoboz.setAttribute("placeholder","Játékosnév")
         jatekosMenuDiv.appendChild(szovegDoboz)
         jatekosMenuMainDiv.appendChild(jatekosMenuDiv)
+
+
+        
         
         document.body.append(jatekosMenuMainDiv)
         
         
     
       }
+      let inditoGomb=document.createElement("button")
+      inditoGomb.setAttribute("id","inditoGomb")
+      inditoGomb.innerHTML="Go"
+      inditoGomb.addEventListener("click",function()
+      {
+        alert("buziCagy")
+      })
+      document.body.append(inditoGomb)
 
 
 
