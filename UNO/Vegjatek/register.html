@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regisztáció</title>
+    <style>
+        body{
+            background-image: url(login.register.jpg);
+            background-size: cover;  
+            display: flex;
+    justify-content: center;
+    align-items: center;
+        }
+        
+        .fade-in-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 9999;
+    animation: fadeOut 2.5s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden; }
+}
+.container{
+    display: flex;
+   background-image: url(formula.png);
+   background-size: cover;
+  padding: 70px;
+  padding-top: 0px;
+  border: 4px solid rgb(238, 195, 255);
+    flex-direction: column;
+    position: fixed;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    top: 25%;
+    
+
+
+}
+.input1{
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    font-size: 17px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.input2{
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    font-size: 17px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.input3{
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    font-size: 17px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.labels{
+align-self: flex-start;
+color: white;
+font-size: 20px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.submit{
+    justify-content: center;
+    padding: 10px;
+    display: flex;
+    margin-top: 20px;
+}
+    </style>
+</head>
+<body>
+<script>
+    //FADE-IN effekt
+document.addEventListener("DOMContentLoaded", function() {
+let overlay = document.createElement("div");
+overlay.className = "fade-in-overlay";
+document.body.appendChild(overlay);
+});
+</script>
+
+
+<form class="container">
+    <p class="labels">Felhasználónév</p>
+    <input class="input1" type="text">
+    <p class="labels">Jelszó (8 karakter)</p>
+    <input class="input2" type="password" minlength="8">
+
+    <p class="labels">Email cím</p>
+    <input class="input3" type="email">
+    <input type="submit" class="submit" value="Regisztáció">
+</form>
+</body>
+</html>

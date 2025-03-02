@@ -1,0 +1,215 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+}
+@keyframes fadeInWithoutScaling {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+}
+
+
+@keyframes fadeOut {
+    0% {
+        opacity: 100;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+
+@keyframes moveAndShrink {
+    0% {
+        transform: translateX(0) scale(1);
+    }
+    100% {
+        transform: translateX(-600px) scale(0.5);
+    }
+
+    
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(54, 54, 54);
+}
+
+.image-container {
+    width: 1000px;
+    opacity: 0; 
+    transform: scale(0.8); 
+    animation: fadeIn 1.5s ease-in-out forwards, moveAndShrink 3s ease-in-out 2.3s forwards;
+}
+
+
+
+.nav-container {
+    display: flex;
+    gap: 30px;
+
+    position: fixed;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: right;
+    top: 7%;
+    left: 80%;
+    user-select: none;
+
+
+   
+}
+
+#nav-button1 {
+    padding: 12px;
+    justify-content: center;
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+    display: flex;
+
+    min-width: 120px;
+   
+    opacity: 0;
+    
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 4s;
+}
+.nav-button2 {
+    padding: 12px;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+    display: flex;
+    font-size: 16px;
+
+    min-width: 120px;
+  
+   
+    opacity: 0;
+    
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 4s;
+}
+#nav-button1:hover {
+    background-color: #0056b3;
+}
+.nav-button2:hover {
+    background-color: #0056b3;
+}
+
+/* Reszponzivitás kisebb képernyőkre */
+@media (max-width: 600px) {
+    body {
+        justify-content: center;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+#nav-button1 {
+        width: 100%;
+        max-width: 200px;
+        font-size: 14px;
+        padding: 8px 16px;
+        
+    }
+    
+    .nav-button2 {
+        width: 100%;
+        max-width: 200px;
+        font-size: 14px;
+        padding: 8px 16px;}
+}
+.fade-in-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 9999;
+    animation: fadeOut 2.5s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden; }
+}
+#loginFormContainer{
+    display: flex;
+    animation: fadeInWithoutScaling 0.3s ease-in;
+    transition: 10s;
+    position: fixed;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    top: 15%;
+    left: 80%;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: palevioletred;
+    padding: 20px;
+
+   
+  
+ 
+  
+  
+    border: 4px solid rgb(238, 195, 255);
+     flex-direction: column;
+
+}
+.formGomb{
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    font-size: 17px;
+    
+}
+.formLabels{
+
+    align-self: flex-start;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    
+}
+#loginSubmit{
+    justify-content: center;
+    padding: 10px;
+    display: flex;
+    margin-top: 20px;
+}
