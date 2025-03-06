@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNO Kártyahúzás</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        .card { display: inline-block; padding: 20px; border-radius: 10px; font-size: 24px; font-weight: bold; color: white; }
+        .red { background-color: red; }
+        .yellow { background-color: yellow; color: black; }
+        .green { background-color: green; }
+        .blue { background-color: blue; }
+        .wild { background-color: black; }
+    </style>
+</head>
+<body>
+
+    <button onclick="drawCard()">Húzz egy kártyát</button>
+    <div id="drawn-card" style="margin-top: 20px;"></div>
+
+    <script>
+        const colors = ["red", "yellow", "green", "blue"];
+        const values = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "Skip", "Reverse", "Draw Two"];
+        const specialCards = ["Wild", "Wild Draw Four"];
+
+        function createDeck() {
+            let deck = [];
+            colors.forEach(color => {
+                values.forEach(value => {
+                    deck.push({ color, value });
+                    if (value !== "0") deck.push({ color, value });
+                });
+            });
+            specialCards.forEach(special => {
+                for (let i = 0; i < 4; i++) {
+                    deck.push({ color: "wild", value: special });
+                }
+            });
+            return deck;
+        }
+
+        let deck = createDeck();
+        console.log(deck)
+        function drawCard() {
+            if (deck.length === 0) {
+                alert("Elfogyott a pakli!");
+                return;
+            }
+            const randomIndex = Math.floor(Math.random() * deck.length);
+            const card = deck.splice(randomIndex, 1)[0];
+
+            const cardDiv = document.getElementById("drawn-card");
+            cardDiv.innerHTML = `<div class="card ${card.color}">${card.value}</div>`;
+        }
+    </script>
+
+</body>
+</html>

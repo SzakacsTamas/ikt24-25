@@ -31,11 +31,19 @@ linkLogin.addEventListener("click", function(){
     jelszo.setAttribute("type","password")
     let loginSubmit=document.createElement("input")
     loginSubmit.id="loginsubmit"
+    let geci=document.createElement("br")
     loginSubmit.setAttribute("type","submit")
+    loginSubmit.addEventListener("click",function()
+    {
+
+        const visszakapottObjektum={users:[{nev:"Kovács József"}]}
+    })
+    
     form.appendChild(labelForName)
     form.appendChild(felhNev)
     form.appendChild(labelForPassword)
     form.appendChild(jelszo)
+    form.appendChild(geci)
     form.appendChild(loginSubmit)
     keret.appendChild(form)
     document.body.append(keret)
