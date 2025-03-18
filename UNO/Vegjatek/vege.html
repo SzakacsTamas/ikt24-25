@@ -29,10 +29,6 @@
             overflow: hidden;
             border: 7px solid white;
         }
-        .uno-number {
-    transform: rotate(50deg); /* Itt állítod be a kívánt szöget */
-    display: inline-block; /* Szükséges, hogy a transform működjön */
-}
 
         /* UNO színek */
         .red { background-color: red; }
@@ -55,6 +51,12 @@
             font-size: 40px;
             font-weight: bold;
             color: rgb(0, 0, 0);
+        }
+
+        /* Számokat tartalmazó span, amely nem forog el */
+        .uno-number {
+            display: inline-block;
+            transform: rotate(50deg); /* Megakadályozza a számok forgását */
         }
 
         /* Reszponzivitás */
@@ -82,20 +84,30 @@
                 font-size: 20px;
             }
         }
+        #inventory{
+            text-align: center;
+            justify-content: center;
+            position: absolute;
+            top: 76%;
+            display: flex;
+        }
     </style>
 </head>
 <body>
-
     <div class="container">
         <h1 class="my-4">UNO Kártyahúzás</h1>
         <button class="btn btn-primary mb-3" onclick="drawCard()">Húzz egy kártyát</button>
+        <button class="btn btn-success mb-3" onclick="initializeDeck()">Új pakli</button>
         <div id="drawn-card" class="d-flex justify-content-center"></div>
+        
+        <div id="inventory" class="inventory"></div>
     </div>
 
     <script>
+        let inventory = [];
         const colors = ["red", "yellow", "green", "blue"];
-        const values = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "Skip", "Reverse", "Draw Two"];
-        const specialCards = ["Wild", "Wild Draw Four"];
+        const values = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "⊘", "⇄", "+2"];
+        const specialCards = ["🔵🔴🟡🟢", "🔵🔴🟡🟢 +4"];
 
         function createDeck() {
             let deck = [];
@@ -122,18 +134,43 @@
             }
             const randomIndex = Math.floor(Math.random() * deck.length);
             const card = deck.splice(randomIndex, 1)[0];
+            displayCard(card, "drawn-card");
+            inventory.push(card);
+            updateInventory();
+        }
 
-            const cardDiv = document.getElementById("drawn-card");
-            cardDiv.innerHTML = `
-              <div class="card uno-card ${card.color}">
-    <div class="uno-oval">
-        <span class="uno-number">${card.value}</span> <!-- Csak a szám forgatása -->
-    </div>
-</div>
+        function initializeDeck() {
+            inventory = [];
+            deck = createDeck();
+            for (let i = 0; i < 7; i++) {
+                drawCard();
+            }
+        }
 
+        function displayCard(card, containerId) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = `
+                <div class="uno-card ${card.color}">
+                    <div class="uno-oval"><span class="uno-number">${card.value}</span></div>
+                </div>
             `;
         }
-    </script>
 
+        function updateInventory() {
+            const inventoryDiv = document.getElementById("inventory");
+            inventoryDiv.innerHTML = "";
+            const totalCards = inventory.length;
+            inventory.forEach((card, index) => {
+                const angle = (index - (totalCards - 1) / 2) * 15;
+                const cardDiv = document.createElement("div");
+                cardDiv.classList.add("uno-card", "inventory-card", card.color);
+                cardDiv.innerHTML = `<div class="uno-oval"><span class="uno-number">${card.value}</span></div>`;
+                
+                inventoryDiv.appendChild(cardDiv);
+            });
+        }
+
+        initializeDeck();
+    </script>
 </body>
 </html>
