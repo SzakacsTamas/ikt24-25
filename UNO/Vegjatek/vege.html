@@ -12,6 +12,35 @@
             padding: 20px; 
             background-color: grey; 
         }
+        #drawn-card .uno-card {
+    background-color: black !important;
+    color: white !important;
+    border-color: white !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    width: 200px;
+    height: 280px;
+}
+
+/* Az ovális fehér elem, amely tartalmazza az "UNO" feliratot */
+#drawn-card .uno-oval {
+    height: 150px;
+    width: 260px;
+    background-color: rgb(218, 0, 0);
+    border-radius: 49%;
+    transform: rotate(-50deg);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: yellow;
+    text-shadow: 3px black;
+}
+
 
         .uno-card {
             width: 180px;
@@ -27,7 +56,7 @@
             transition: transform 0.2s ease-in-out;
             position: relative;
             overflow: hidden;
-            border: 7px solid white;
+            border: 8px solid white;
         }
 
         /* UNO színek */
@@ -84,13 +113,19 @@
                 font-size: 20px;
             }
         }
-        #inventory{
-            text-align: center;
-            justify-content: center;
-            position: absolute;
-            top: 76%;
-            display: flex;
-        }
+#inventory {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 10px;
+    gap: 15px; /* Nagyobb térköz a kártyák között */
+    flex-wrap: wrap; /* Ha sok kártya van, törje a sort */
+}
     </style>
 </head>
 <body>
@@ -148,13 +183,23 @@
         }
 
         function displayCard(card, containerId) {
-            const container = document.getElementById(containerId);
-            container.innerHTML = `
-                <div class="uno-card ${card.color}">
-                    <div class="uno-oval"><span class="uno-number">${card.value}</span></div>
-                </div>
-            `;
-        }
+    const container = document.getElementById(containerId);
+    
+    if (containerId === "drawn-card") {
+        container.innerHTML = `
+            <div class="uno-card wild">
+                <div class="uno-oval"><span class="uno-number">UNO</span></div>
+            </div>
+        `;
+    } else {
+        container.innerHTML = `
+            <div class="uno-card ${card.color}">
+                <div class="uno-oval"><span class="uno-number">${card.value}</span></div>
+            </div>
+        `;
+    }
+}
+
 
         function updateInventory() {
             const inventoryDiv = document.getElementById("inventory");
