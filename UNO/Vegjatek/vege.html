@@ -68,7 +68,7 @@
 
         /* Ovális fehér dizájnelem, amely tartalmazza a számot */
         .uno-oval {
-            height: 120px;
+            height: 100px;
             width: 230px;
             background-color: white;
             border-radius: 49%;
@@ -113,18 +113,38 @@
                 font-size: 20px;
             }
         }
-#inventory {
+        #inventory {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
     position: fixed;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
+    width: 1200px; /* Fix szélesség */
+    max-width: 100%;
     padding: 10px;
-    gap: 15px; /* Nagyobb térköz a kártyák között */
-    flex-wrap: wrap; /* Ha sok kártya van, törje a sort */
+    gap: 10px;
+    background-image: url(form3.png);
+    border: 3px solid black;
+    border-radius: 10px;
+}
+.inventory-card {
+    width: 120px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    border: 5px solid white;
+    transition: transform 0.2s ease-in-out;
 }
     </style>
 </head>
@@ -142,7 +162,7 @@
         let inventory = [];
         const colors = ["red", "yellow", "green", "blue"];
         const values = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "⊘", "⇄", "+2"];
-        const specialCards = ["🔵🔴🟡🟢", "🔵🔴🟡🟢 +4"];
+        const specialCards = ["🌈", "🌈 +4"];
 
         function createDeck() {
             let deck = [];
@@ -201,20 +221,41 @@
 }
 
 
-        function updateInventory() {
-            const inventoryDiv = document.getElementById("inventory");
-            inventoryDiv.innerHTML = "";
-            const totalCards = inventory.length;
-            inventory.forEach((card, index) => {
-                const angle = (index - (totalCards - 1) / 2) * 15;
-                const cardDiv = document.createElement("div");
-                cardDiv.classList.add("uno-card", "inventory-card", card.color);
-                cardDiv.innerHTML = `<div class="uno-oval"><span class="uno-number">${card.value}</span></div>`;
-                
-                inventoryDiv.appendChild(cardDiv);
-            });
-        }
+function updateInventory() {
+    const inventoryDiv = document.getElementById("inventory");
+    inventoryDiv.innerHTML = "";
 
+    const totalCards = inventory.length;
+    
+    // Dinamikus méretarányok kiszámítása
+    let scaleFactor = 1; // Alapértelmezett méret (100%)
+    
+    if (totalCards > 10) scaleFactor = 0.85;
+    if (totalCards > 15) scaleFactor = 0.7;
+    if (totalCards > 20) scaleFactor = 0.55;
+
+    const baseWidth = 120;
+    const baseHeight = 180;
+    
+    inventory.forEach((card) => {
+        const cardDiv = document.createElement("div");
+        cardDiv.classList.add("uno-card", "inventory-card", card.color);
+        cardDiv.innerHTML = `<div class="uno-oval"><span class="uno-number">${card.value}</span></div>`;
+
+        // Méretek arányos csökkentése
+        cardDiv.style.width = `${baseWidth * scaleFactor}px`;
+        cardDiv.style.height = `${baseHeight * scaleFactor}px`;
+        cardDiv.style.fontSize = `${24 * scaleFactor}px`;
+
+        // Az ovális arányos csökkentése
+        const oval = cardDiv.querySelector(".uno-oval");
+        oval.style.width = `${160 * scaleFactor}px`;
+        oval.style.height = `${90 * scaleFactor}px`;
+        oval.style.fontSize = `${40 * scaleFactor}px`;
+
+        inventoryDiv.appendChild(cardDiv);
+    });
+}
         initializeDeck();
     </script>
 </body>
