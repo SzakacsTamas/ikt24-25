@@ -12,18 +12,12 @@
             padding: 20px; 
             background-color: grey; 
         }
-        #drawn-card .uno-card {
-    background-color: black !important;
-    color: white !important;
-    border-color: white !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    width: 200px;
-    height: 280px;
+        #drawn-card {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
 }
-
 /* Az ovális fehér elem, amely tartalmazza az "UNO" feliratot */
 #drawn-card .uno-oval {
     height: 150px;
@@ -57,6 +51,17 @@
             position: relative;
             overflow: hidden;
             border: 8px solid white;
+            user-select: none; 
+        }
+        .uno-card:hover
+        {
+            
+            cursor: pointer;
+            transition: 0.3s;
+
+
+
+box-shadow: 0 0 25px #ffffff, 0 0 25px #ffffff,  0 0 25px #ffffff,0 0 25px #ffffff
         }
 
         /* UNO színek */
@@ -153,7 +158,7 @@
         <h1 class="my-4">UNO Kártyahúzás</h1>
         <button class="btn btn-primary mb-3" onclick="drawCard()">Húzz egy kártyát</button>
         <button class="btn btn-success mb-3" onclick="initializeDeck()">Új pakli</button>
-        <div id="drawn-card" class="d-flex justify-content-center"></div>
+        <div id="drawn-card" class="d-flex justify-content-center" onclick="drawCard()"></div>
         
         <div id="inventory" class="inventory"></div>
     </div>
@@ -207,7 +212,7 @@
     
     if (containerId === "drawn-card") {
         container.innerHTML = `
-            <div class="uno-card wild">
+            <div class="uno-card wild" onclick="drawCard()">
                 <div class="uno-oval"><span class="uno-number">UNO</span></div>
             </div>
         `;
@@ -219,6 +224,7 @@
         `;
     }
 }
+
 
 
 function updateInventory() {
