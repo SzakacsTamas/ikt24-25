@@ -126,6 +126,50 @@ body {
 .nav-button2:hover {
     background-color: #0056b3;
 }
+#textContainer{
+    padding: 16px;
+    justify-content: center;
+    background-color: #e0e0e0;
+    color: rgb(0, 0, 0);
+    border-radius: 8px;
+    
+    transition: 0.3s;
+    font-size: 23px;
+
+position: absolute;
+top: 10%;
+border: 2px solid black;
+    min-width: 150px;
+    max-width: 650px;
+   text-decoration: none;
+    opacity: 0;
+    
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 4s;
+}
+#inditasiGomb{
+    padding: 16px;
+    justify-content: center;
+    background-color: #ff4848;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 25px;
+    display: flex;
+position: fixed;
+top: 90%;
+border: 2px solid black;
+    min-width: 150px;
+   text-decoration: none;
+    opacity: 0;
+    
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 4s;
+}
+#inditasiGomb:hover{
+    background-color: rgb(255, 126, 126);
+}
 
 /* Reszponzivitás kisebb képernyőkre */
 @media (max-width: 600px) {
