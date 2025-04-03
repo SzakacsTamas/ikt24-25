@@ -10,8 +10,16 @@
             font-family: Arial, sans-serif; 
             text-align: center; 
             padding: 20px; 
-            background-color: grey; 
+            background-image: url(back1.jpg);
+            background-repeat: no-repeat; 
+            background-size: cover;
+            opacity: 0;
+            transition: opacity 0.9s ease-in-out;
+            background-color: black;
         }
+        body.loaded {
+    opacity: 1;
+}
         #drawn-card {
     position: absolute;
     left: 10px;
@@ -155,8 +163,8 @@ box-shadow: 0 0 25px #ffffff, 0 0 25px #ffffff,  0 0 25px #ffffff,0 0 25px #ffff
 </head>
 <body>
     <div class="container">
-        <h1 class="my-4">UNO Kártyahúzás</h1>
-        <button class="btn btn-primary mb-3" onclick="drawCard()">Húzz egy kártyát</button>
+        
+   
         <button class="btn btn-success mb-3" onclick="initializeDeck()">Új pakli</button>
         <div id="drawn-card" class="d-flex justify-content-center" onclick="drawCard()"></div>
         
@@ -206,6 +214,14 @@ box-shadow: 0 0 25px #ffffff, 0 0 25px #ffffff,  0 0 25px #ffffff,0 0 25px #ffff
                 drawCard();
             }
         }
+        /*
+          function drawCenterCard() {
+            if (deck.length === 0) return;
+            const randomIndex = Math.floor(Math.random() * deck.length);
+            const card = deck.splice(randomIndex, 1)[0];
+            displayCard(card, "center-card");
+        }
+            */
 
         function displayCard(card, containerId) {
     const container = document.getElementById(containerId);
@@ -234,7 +250,7 @@ function updateInventory() {
     const totalCards = inventory.length;
     
     // Dinamikus méretarányok kiszámítása
-    let scaleFactor = 1; // Alapértelmezett méret (100%)
+    let scaleFactor = 1; // 
     
     if (totalCards > 10) scaleFactor = 0.85;
     if (totalCards > 15) scaleFactor = 0.7;
@@ -263,6 +279,9 @@ function updateInventory() {
     });
 }
         initializeDeck();
+        document.addEventListener("DOMContentLoaded", function () {
+    document.body.classList.add("loaded");
+});
     </script>
 </body>
 </html>
