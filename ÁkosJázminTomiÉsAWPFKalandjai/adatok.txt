@@ -1,0 +1,8 @@
+Nev;Leiras;Ertekeles;DB-szam
+Kalapács;Ez arra jó hogy basz;4;56
+Fogó;Ez nagyon fog;3;32
+Fúró;megfuroreg;5;76
+100x Vas Szögek;szögesDologEzIS;4;140
+Ingatag Létra;Kurva magas létra;2;13
+
+
