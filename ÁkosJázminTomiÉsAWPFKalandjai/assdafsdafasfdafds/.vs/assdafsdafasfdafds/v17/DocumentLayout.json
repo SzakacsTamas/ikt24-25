@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\munkak\u00F6nyvt\u00E1r\\Szakacs Tamas 12.C\\ikt24-25\\\u00C1kosJ\u00E1zminTomi\u00C9sAWPFKalandjai\\assdafsdafasfdafds\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3704D070-D922-4134-BA59-ECA3FB5AD859}|assdafsdafasfdafds\\assdafsdafasfdafds.csproj|d:\\munkak\u00F6nyvt\u00E1r\\szakacs tamas 12.c\\ikt24-25\\\u00E1kosj\u00E1zmintomi\u00E9sawpfkalandjai\\assdafsdafasfdafds\\assdafsdafasfdafds\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3704D070-D922-4134-BA59-ECA3FB5AD859}|assdafsdafasfdafds\\assdafsdafasfdafds.csproj|solutionrelative:assdafsdafasfdafds\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3704D070-D922-4134-BA59-ECA3FB5AD859}|assdafsdafasfdafds\\assdafsdafasfdafds.csproj|d:\\munkak\u00F6nyvt\u00E1r\\szakacs tamas 12.c\\ikt24-25\\\u00E1kosj\u00E1zmintomi\u00E9sawpfkalandjai\\assdafsdafasfdafds\\assdafsdafasfdafds\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3704D070-D922-4134-BA59-ECA3FB5AD859}|assdafsdafasfdafds\\assdafsdafasfdafds.csproj|solutionrelative:assdafsdafasfdafds\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\munkak\u00F6nyvt\u00E1r\\Szakacs Tamas 12.C\\ikt24-25\\\u00C1kosJ\u00E1zminTomi\u00C9sAWPFKalandjai\\assdafsdafasfdafds\\assdafsdafasfdafds\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "assdafsdafasfdafds\\MainWindow.xaml",
+              "ToolTip": "D:\\munkak\u00F6nyvt\u00E1r\\Szakacs Tamas 12.C\\ikt24-25\\\u00C1kosJ\u00E1zminTomi\u00C9sAWPFKalandjai\\assdafsdafasfdafds\\assdafsdafasfdafds\\MainWindow.xaml",
+              "RelativeToolTip": "assdafsdafasfdafds\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-05T09:59:18.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\munkak\u00F6nyvt\u00E1r\\Szakacs Tamas 12.C\\ikt24-25\\\u00C1kosJ\u00E1zminTomi\u00C9sAWPFKalandjai\\assdafsdafasfdafds\\assdafsdafasfdafds\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "assdafsdafasfdafds\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\munkak\u00F6nyvt\u00E1r\\Szakacs Tamas 12.C\\ikt24-25\\\u00C1kosJ\u00E1zminTomi\u00C9sAWPFKalandjai\\assdafsdafasfdafds\\assdafsdafasfdafds\\MainWindow.xaml.cs",
+              "RelativeToolTip": "assdafsdafasfdafds\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T09:59:16.651Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
