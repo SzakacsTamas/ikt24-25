@@ -15,11 +15,11 @@
                         <GradientStop Color="White" Offset="0"/>
                     </LinearGradientBrush>
                 </Grid.Background>
-                <Image Margin="0,0,0,203" Source="/kalapacs_800_g_fanyellel-i73957.jpg" Stretch="Fill"/>
+                <Image Margin="0,0,0,203" Source="/kalapacs.jpg" Stretch="Fill"/>
                 <Button Content="Kosárba Teszem" HorizontalAlignment="Center" Height="41" Margin="0,267,0,0" VerticalAlignment="Top" Width="94" Background="#FFFFBF11" FontFamily="Bahnschrift SemiBold"/>
                 <Label Content="Kalapács" HorizontalAlignment="Center" Margin="0,115,0,0" VerticalAlignment="Top" Width="126" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFBDBDBD"/>
-                <Label Content="Ez arra jó hogy szöget rakj meg." HorizontalAlignment="Center" Margin="0,141,0,0" VerticalAlignment="Top" Width="126" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="79"/>
-                <Label Content="" HorizontalAlignment="Center" Margin="0,220,0,0" VerticalAlignment="Top" Width="126" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFBDBDBD"/>
+                <Label Content="Ez arra jó hogy szöget rakj meg." HorizontalAlignment="Center" Margin="0,141,0,0" VerticalAlignment="Top" Width="126" Height="79" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Label Content="⭐⭐⭐" HorizontalAlignment="Center" Margin="0,220,0,0" VerticalAlignment="Top" Width="126" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFBDBDBD"/>
 
             </Grid>
         </Border>
@@ -31,11 +31,11 @@
                         <GradientStop Color="White" Offset="0"/>
                     </LinearGradientBrush>
                 </Grid.Background>
-                <Image Margin="0,0,0,203" Source="/kalapacs_800_g_fanyellel-i73957.jpg" Stretch="Fill"/>
+                <Image Margin="0,0,0,203" Source="/furo.jpg" Stretch="Fill"/>
                 <Button Content="Kosárba Teszem" HorizontalAlignment="Center" Height="41" Margin="0,267,0,0" VerticalAlignment="Top" Width="94" Background="#FFFFBF11" FontFamily="Bahnschrift SemiBold"/>
-                <Label Content="Kalapács" HorizontalAlignment="Center" Margin="0,115,0,0" VerticalAlignment="Top" Width="126" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFBDBDBD"/>
-                <Label Content="Ez arra jó hogy szöget rakj meg." HorizontalAlignment="Center" Margin="0,141,0,0" VerticalAlignment="Top" Width="126" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="79"/>
-                <Label Content="" HorizontalAlignment="Center" Margin="0,220,0,0" VerticalAlignment="Top" Width="126" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFBDBDBD"/>
+                <Label Content="Furó" HorizontalAlignment="Center" Margin="0,115,0,0" VerticalAlignment="Top" Width="126" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFBDBDBD"/>
+                <Label Content="megfurOreg." HorizontalAlignment="Center" Margin="0,141,0,0" VerticalAlignment="Top" Width="126" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="79"/>
+                <Label Content="⭐⭐⭐⭐" HorizontalAlignment="Center" Margin="0,220,0,0" VerticalAlignment="Top" Width="126" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFBDBDBD"/>
 
             </Grid>
         </Border>
@@ -47,11 +47,11 @@
                         <GradientStop Color="White" Offset="0"/>
                     </LinearGradientBrush>
                 </Grid.Background>
-                <Image Margin="0,0,0,203" Source="/kalapacs_800_g_fanyellel-i73957.jpg" Stretch="Fill"/>
+                <Image Margin="0,0,0,203" Source="/fogo.jpg" Stretch="Fill"/>
                 <Button Content="Kosárba Teszem" HorizontalAlignment="Center" Height="41" Margin="0,267,0,0" VerticalAlignment="Top" Width="94" Background="#FFFFBF11" FontFamily="Bahnschrift SemiBold"/>
-                <Label Content="Kalapács" HorizontalAlignment="Center" Margin="0,115,0,0" VerticalAlignment="Top" Width="126" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFBDBDBD"/>
-                <Label Content="Ez arra jó hogy szöget rakj meg." HorizontalAlignment="Center" Margin="0,141,0,0" VerticalAlignment="Top" Width="126" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="79"/>
-                <Label Content="" HorizontalAlignment="Center" Margin="0,220,0,0" VerticalAlignment="Top" Width="126" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFBDBDBD"/>
+                <Label Content="Fogó" HorizontalAlignment="Center" Margin="0,115,0,0" VerticalAlignment="Top" Width="126" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFBDBDBD"/>
+                <Label Content="Ez nagyon fog." HorizontalAlignment="Center" Margin="0,141,0,0" VerticalAlignment="Top" Width="126" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="79"/>
+                <Label Content="⭐⭐⭐⭐⭐" HorizontalAlignment="Center" Margin="0,220,0,0" VerticalAlignment="Top" Width="126" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFBDBDBD"/>
             </Grid>
         </Border>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="318" Margin="460,72,0,0" VerticalAlignment="Top" Width="126">
@@ -62,11 +62,11 @@
                         <GradientStop Color="White" Offset="0"/>
                     </LinearGradientBrush>
                 </Grid.Background>
-                <Image Margin="0,0,0,203" Source="/kalapacs_800_g_fanyellel-i73957.jpg" Stretch="Fill"/>
+                <Image Margin="0,0,0,203" Source="/szog.jpg" Stretch="Fill"/>
                 <Button Content="Kosárba Teszem" HorizontalAlignment="Center" Height="41" Margin="0,267,0,0" VerticalAlignment="Top" Width="94" Background="#FFFFBF11" FontFamily="Bahnschrift SemiBold"/>
-                <Label Content="Kalapács" HorizontalAlignment="Center" Margin="0,115,0,0" VerticalAlignment="Top" Width="126" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFBDBDBD"/>
-                <Label Content="Ez arra jó hogy szöget rakj meg." HorizontalAlignment="Center" Margin="0,141,0,0" VerticalAlignment="Top" Width="126" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="79"/>
-                <Label Content="" HorizontalAlignment="Center" Margin="0,220,0,0" VerticalAlignment="Top" Width="126" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFBDBDBD"/>
+                <Label Content="100x Szögek" HorizontalAlignment="Center" Margin="0,115,0,0" VerticalAlignment="Top" Width="126" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFBDBDBD"/>
+                <Label Content="szögesDologEzIS." HorizontalAlignment="Center" Margin="0,141,0,0" VerticalAlignment="Top" Width="126" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="79"/>
+                <Label Content="⭐⭐⭐" HorizontalAlignment="Center" Margin="0,220,0,0" VerticalAlignment="Top" Width="126" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFBDBDBD"/>
 
 
             </Grid>
@@ -79,14 +79,16 @@
                         <GradientStop Color="White" Offset="0"/>
                     </LinearGradientBrush>
                 </Grid.Background>
-                <Image Margin="0,0,0,203" Source="/kalapacs_800_g_fanyellel-i73957.jpg" Stretch="Fill"/>
+                <Image Margin="0,0,0,203" Source="/letra.jpg" Stretch="Fill"/>
                 <Button Content="Kosárba Teszem" HorizontalAlignment="Center" Height="41" Margin="0,267,0,0" VerticalAlignment="Top" Width="94" Background="#FFFFBF11" FontFamily="Bahnschrift SemiBold"/>
-                <Label Content="Kalapács" HorizontalAlignment="Center" Margin="0,115,0,0" VerticalAlignment="Top" Width="126" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFBDBDBD"/>
-                <Label Content="Ez arra jó hogy szöget rakj meg." HorizontalAlignment="Center" Margin="0,141,0,0" VerticalAlignment="Top" Width="126" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="79"/>
-                <Label Content="" HorizontalAlignment="Center" Margin="0,220,0,0" VerticalAlignment="Top" Width="126" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFBDBDBD"/>
+                <Label Content="Létra" HorizontalAlignment="Center" Margin="0,115,0,0" VerticalAlignment="Top" Width="126" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFBDBDBD"/>
+                <Label Content="K*rva... nagyon magas létra." HorizontalAlignment="Center" Margin="0,141,0,0" VerticalAlignment="Top" Width="126" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="79"/>
+                <Label Content="⭐" HorizontalAlignment="Center" Margin="0,220,0,0" VerticalAlignment="Top" Width="126" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFBDBDBD"/>
 
             </Grid>
         </Border>
+        <Button Content="🛒" HorizontalAlignment="Left" Margin="729,18,0,0" VerticalAlignment="Top" Height="35" Width="37" FontSize="20"/>
+        <Label Content="Használt cuccok barkács boltja" HorizontalAlignment="Left" Margin="132,10,0,0" VerticalAlignment="Top" Width="531" Height="50" FontSize="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Bahnschrift" Background="#FFE8E8E8"/>
 
     </Grid>
 </Window>
